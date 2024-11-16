@@ -13,9 +13,9 @@ const Team = () => {
           <p className="text-2xl text-justify max-w-3xl font-semibold text-gray-700 leading-relaxed">
             At TechLiftUp, we combine innovation and expertise to deliver
             cutting-edge solutions in software development, app creation,
-            digital marketing, and MEP (Mechanical, Electrical, and Plumbing)
-            design. With over 5+ years of experience, we empower businesses with
-            sustainable and efficient outcomes, tailored to their unique needs.
+            digital marketing, and MEP design. With over 5+ years of experience,
+            we empower businesses with sustainable and efficient outcomes,
+            tailored to their unique needs.
           </p>
 
           <button className="mt-6 px-6 py-3 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition">
