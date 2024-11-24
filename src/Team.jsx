@@ -43,7 +43,7 @@ const Team = () => {
                 <h4 className="text-lg font-bold text-gray-800">
                   Muhammad Sabir
                 </h4>
-                <p className="text-gray-600 text-sm">CTO & Team Lead</p>
+                <p className="text-gray-600 text-sm">CTO & MEP Design Head</p>
               </div>
             </div>
 
@@ -71,7 +71,7 @@ const Team = () => {
                 <h4 className="text-lg font-bold text-gray-800">
                   Qadeer Ahmad
                 </h4>
-                <p className="text-gray-600 text-sm">COO & HR</p>
+                <p className="text-gray-600 text-sm">IT Head</p>
               </div>
             </div>
           </div>

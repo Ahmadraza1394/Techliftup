@@ -1,9 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Home";
-import About from "./About"; // Import About Page Component
-import Team from "./Team"; // Import About Page Component
-// import Blog from "./Blog"; // Import About Page Component
-import "./assets/styles/index.css";
+import Home from "./Home"; // Corrected path
+// import NotFound from "./NotFound"; // Corrected path
+
+import About from "./About"; // Corrected path
+import Cases from "./Cases"; // Corrected path
+
+import Team from "./Team"; // Corrected path
+// import Blog from "./Blog"; // Import Blog Page Component
+import "./assets/styles/index.css"; // Corrected path
+
+import CaseDetail from "./CaseDetail";
 
 function App() {
   return (
@@ -11,8 +17,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} /> {/* Add About route */}
-        <Route path="/team" element={<Team />} /> {/* Add About route */}
-        {/* <Route path="/blog" element={<Blog />} /> Add About route */}
+        <Route path="/team" element={<Team />} /> {/* Add Team route */}
+        <Route path="/cases" element={<Cases />} />
+        <Route path="/cases/:caseId" element={<CaseDetail />} />
+        {/* Case Detail route */}
+        {/* <Route path="*" element={<NotFound />} /> Not Found route */}
         {/* Add more routes here if needed */}
       </Routes>
     </Router>

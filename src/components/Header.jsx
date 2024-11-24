@@ -34,10 +34,10 @@ const Header = () => {
             Home
           </Link>
           <Link
-            to="/portfolio"
+            to="/cases"
             className="text-gray-800 hover:text-sky-600 transition font-bold"
           >
-            Our Portfolio
+            Case Studies
           </Link>
           <Link
             to="/team"
@@ -51,12 +51,12 @@ const Header = () => {
           >
             About Us
           </Link>
-          <Link
+          {/* <Link
             to="/blogs"
             className="text-gray-800 hover:text-sky-600 transition font-bold"
           >
             Blogs
-          </Link>
+          </Link> */}
           <Link
             to="/contact"
             className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition font-bold"
