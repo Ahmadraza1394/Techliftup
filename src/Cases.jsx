@@ -44,16 +44,19 @@ const Cases = () => {
           <h2 className="text-4xl md:text-5xl font-bold  mb-4 text-red-500">
             Our Cases
           </h2>
-          <p className="text-2xl text-justify max-w-3xl font-semibold text-gray-700 leading-relaxed">
+          <p className="text-2xl mb-6 text-justify max-w-3xl font-semibold text-gray-700 leading-relaxed">
             Every case is unique, and TechLiftUp takes pride in crafting
             solutions tailored to your business needs. From software development
             to building MEP engineering platforms, our versatile approach
             ensures the highest quality and measurable results.
           </p>
 
-          <button className="mt-6 px-6 py-3 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition">
+          <Link
+            to="/#contact"
+            className="mt-6 px-6 py-3 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
         <hr className=" bg-gray-50 text-gray-50  " />
       </section>

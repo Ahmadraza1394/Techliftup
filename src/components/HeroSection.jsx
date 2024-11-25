@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -37,12 +38,12 @@ const HeroSection = () => {
           innovation to execution, we’re your trusted partner.
         </p>
         <div className="mt-6 flex space-x-4">
-          <a
-            href="#services"
+          <Link
+            to="/about"
             className="bg-sky-500 text-white font-medium px-6 py-3 rounded-full hover:bg-sky-600 transition shadow-md"
           >
             Explore Services
-          </a>
+          </Link>
           <a
             href="#contact"
             className="bg-gray-100 text-sky-500 font-medium px-6 py-3 rounded-full border border-sky-500 hover:bg-sky-500 hover:text-white transition shadow-md"

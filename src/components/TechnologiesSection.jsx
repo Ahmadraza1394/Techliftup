@@ -6,11 +6,8 @@ import {
   FaVuejs,
   FaNodeJs,
   FaJava,
-  FaAws,
   FaAndroid,
   FaApple,
-  FaCloud,
-  FaTools,
   FaCogs,
   FaBolt,
   FaWater,
@@ -24,9 +21,6 @@ import {
   SiPython,
   SiMysql,
   SiMongodb,
-  SiGooglecloud,
-  SiRedis,
-  SiElasticsearch,
   SiTableau,
   SiAutodesk,
 } from "react-icons/si";
@@ -34,15 +28,7 @@ import {
 const TechnologiesSection = () => {
   const [activeTab, setActiveTab] = useState("Frontend");
 
-  const tabs = [
-    "Frontend",
-    "Mobile",
-    "Backend",
-
-    "Cloud",
-    "DB",
-    "Building Services",
-  ];
+  const tabs = ["Frontend", "Backend", "Mobile", "DB", "Building Services"];
 
   const technologies = {
     Frontend: [
@@ -66,13 +52,6 @@ const TechnologiesSection = () => {
       { name: "Java", icon: <FaJava className="text-4xl" /> },
     ],
 
-    Cloud: [
-      { name: "AWS", icon: <FaAws className="text-4xl" /> },
-      { name: "Azure", icon: <FaCloud className="text-4xl" /> },
-      { name: "GCP", icon: <SiGooglecloud className="text-4xl" /> },
-      { name: "Redis", icon: <SiRedis className="text-4xl" /> },
-      { name: "Elasticsearch", icon: <SiElasticsearch className="text-4xl" /> },
-    ],
     DB: [
       { name: "MySQL / PostgreSQL", icon: <SiMysql className="text-4xl" /> },
       { name: "MongoDB", icon: <SiMongodb className="text-4xl" /> },

@@ -42,11 +42,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">TechLiftUp Pvt Ltd.</h3>
           <div>
             <h4 className="font-semibold">KSA Office</h4>
-            <p>
-              Islabia Riyadh,
-              <br />
-              11564 Riyadh, Saudia Arabia
-            </p>
+            <p>Riyadh, Saudia Arabia</p>
           </div>{" "}
           <div className="mb-4">
             <h4 className="font-semibold">Pakistan Office</h4>
@@ -88,15 +84,6 @@ const Footer = () => {
           © 2024, TechLiftUp Pvt Ltd. Made with passion by{" "}
           <span className="text-red-600 font-semibold">TechLiftUp</span>
         </p>
-        <div className="mt-2">
-          <a href="#" className="text-gray-600 hover:text-red-600">
-            Privacy & Cookie Policy
-          </a>{" "}
-          |{" "}
-          <a href="#" className="text-gray-600 hover:text-red-600">
-            Terms of Service
-          </a>
-        </div>
       </div>
     </footer>
   );

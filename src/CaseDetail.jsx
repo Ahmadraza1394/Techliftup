@@ -4,7 +4,7 @@ import Header from "./components/Header";
 
 const caseData = {
   "cabo-shark-dive": {
-    title: "Cabo Shark Dive Website",
+    title: "Cabo Shark Dive ",
     image: "/assets/images/caboshark2.png", // Replace with the actual path
     overview:
       "Cabo Shark Dive, a renowned shark diving company in Los Cabos, required a responsive, user-friendly website to showcase its world-class shark diving and snorkeling tours. The goal was to provide visitors with a seamless experience for learning about tours, booking trips, and contacting the company.",
@@ -37,7 +37,7 @@ const caseData = {
     website: "https://cabosharkdive.com",
   },
   "cruise-car-fly": {
-    title: "Affiliate Landing Page SEO Optimization",
+    title: "Cruise Car Fly  ",
     image: "/assets/images/cruisecarfly2.png", // Corrected path
     overview:
       "CruiseCarFly is an affiliate landing page for deals on cruises, car rentals, and flights. The project aimed to increase Google visibility, enhance user experience, and drive conversions.",

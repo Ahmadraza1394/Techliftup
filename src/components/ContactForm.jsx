@@ -2,6 +2,10 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 
 const ContactForm = () => {
+  const SERVICE_ID = "your_service_id"; // Replace with your EmailJS Service ID
+  const TEMPLATE_ID = "your_template_id"; // Replace with your EmailJS Template ID
+  const USER_ID = "your_user_id"; // Replace with your EmailJS User ID
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,6 +16,7 @@ const ContactForm = () => {
     details: "",
   });
   const [isSent, setIsSent] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,27 +26,35 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs
-      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
-      .then(
-        (result) => {
-          console.log(result.text);
-          setIsSent(true);
-          setTimeout(() => setIsSent(false), 3000);
-          setFormData({
-            name: "",
-            email: "",
-            company: "",
-            phone: "",
-            subject: "",
-            budget: "",
-            details: "",
-          });
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    // Validate form fields
+    if (!formData.name || !formData.email || !formData.details) {
+      setError("Please fill out all required fields.");
+      return;
+    }
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID).then(
+      (result) => {
+        console.log(result.text);
+        setIsSent(true);
+        setTimeout(() => setIsSent(false), 3000);
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          subject: "",
+          budget: "",
+          details: "",
+        });
+        setError("");
+      },
+      (error) => {
+        console.error(error.text);
+        setError(
+          "An error occurred while sending your message. Please try again."
+        );
+      }
+    );
   };
 
   return (
@@ -51,9 +64,9 @@ const ContactForm = () => {
         Fill in this form or{" "}
         <a
           href="mailto:info@techliftup.com"
-          className="text-red-600 font-semibold"
+          className="text-red-600 font-semibold underline hover:text-red-700"
         >
-          send us an e-mail
+          send us an email
         </a>{" "}
         with your inquiry.
       </p>
@@ -62,6 +75,9 @@ const ContactForm = () => {
         <div className="mb-4 p-4 bg-green-100 text-green-700 rounded">
           Your message has been sent successfully!
         </div>
+      )}
+      {error && (
+        <div className="mb-4 p-4 bg-red-100 text-red-700 rounded">{error}</div>
       )}
 
       <form
@@ -76,7 +92,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder="Your name"
-            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:border-gray-400"
+            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
             required
           />
         </div>
@@ -87,8 +103,8 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Your working email"
-            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:border-gray-400"
+            placeholder="Your email"
+            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
             required
           />
         </div>
@@ -100,18 +116,18 @@ const ContactForm = () => {
             value={formData.company}
             onChange={handleChange}
             placeholder="Your company name"
-            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:border-gray-400"
+            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
         <div className="flex flex-col">
           <label className="text-sm font-semibold">Phone</label>
           <input
-            type="text"
+            type="tel"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="Your actual phone number"
-            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:border-gray-400"
+            placeholder="Your phone number"
+            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
         <div className="flex flex-col">
@@ -121,8 +137,8 @@ const ContactForm = () => {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            placeholder="Choose a subject"
-            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:border-gray-400"
+            placeholder="Subject"
+            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
         <div className="flex flex-col">
@@ -131,7 +147,7 @@ const ContactForm = () => {
             name="budget"
             value={formData.budget}
             onChange={handleChange}
-            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:border-gray-400"
+            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             <option value="">Select budget</option>
             <option value="Less than 5K">Less than 5K</option>
@@ -141,27 +157,21 @@ const ContactForm = () => {
           </select>
         </div>
         <div className="flex flex-col col-span-2">
-          <label className="text-sm font-semibold">Project details</label>
+          <label className="text-sm font-semibold">Project details*</label>
           <textarea
             name="details"
             value={formData.details}
             onChange={handleChange}
-            placeholder="Brief project details"
+            placeholder="Provide some details about your project"
             rows="5"
-            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:border-gray-400"
+            className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            required
           ></textarea>
-        </div>
-        <div className="flex items-start col-span-2">
-          <input type="checkbox" className="mt-1 mr-2" />
-          <p className="text-sm">
-            I’m okay with getting emails and having that activity tracked to
-            improve my experience.
-          </p>
         </div>
         <div className="col-span-2">
           <button
             type="submit"
-            className="w-full md:w-auto bg-red-500 text-white px-8 py-3 rounded mt-4 hover:bg-red-600 transition"
+            className="w-full md:w-auto bg-red-500 text-white px-8 py-3 rounded-md hover:bg-red-600 transition"
           >
             Get a Quote
           </button>

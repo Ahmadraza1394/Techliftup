@@ -12,6 +12,7 @@ import {
   FaWater,
   FaWind,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -21,14 +22,17 @@ const About = () => {
         {/* About Us Section */}
         <div className="text-left mb-16">
           <h2 className="text-5xl font-bold text-red-500 mb-6">About Us</h2>
-          <p className="text-2xl font-semibold text-justify max-w-3xl leading-relaxed">
+          <p className="text-2xl mb-7 font-semibold text-justify max-w-3xl leading-relaxed">
             TechLiftUp – Your trusted partner for innovative digital solutions.
             We excel at empowering businesses through cutting-edge technology
             and a commitment to excellence.
           </p>
-          <button className="mt-8 px-6 py-3 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition">
+          <Link
+            to="/#contact"
+            className="mt-14 px-6 py-3 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
         {/* Digital Services Section */}
         <section className="digital-services-section bg-gray-100 py-16 px-6 md:px-12">
@@ -125,7 +129,7 @@ const About = () => {
               },
               {
                 icon: <FaTools />,
-                title: "Specialized Services",
+                title: "BIM Modeling",
                 bgColor: "bg-yellow-500",
               },
             ].map((service, index) => (

@@ -1,28 +1,27 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "/assets/images/logo.png"; // Adjust path as necessary
+import logo from "/assets/images/logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Toggle the mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
     <header className="bg-white shadow-md fixed w-full z-40">
-      <div className="container mx-auto flex justify-between items-center ">
+      <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
             src={logo}
             alt="TechLiftUp Logo"
-            className=" ml-8 h-20 w-auto object-center"
-          />{" "}
-          {/* Adjust height as needed */}
+            className="ml-8 h-20 w-auto object-center"
+          />
         </Link>
 
         {/* Desktop Menu */}
@@ -51,21 +50,15 @@ const Header = () => {
           >
             About Us
           </Link>
-          {/* <Link
-            to="/blogs"
-            className="text-gray-800 hover:text-sky-600 transition font-bold"
-          >
-            Blogs
-          </Link> */}
           <Link
-            to="/contact"
+            to="/#contact"
             className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition font-bold"
           >
             Contact Us
           </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu */}
         <div className="md:hidden flex items-center">
           <button
             onClick={toggleMenu}
@@ -76,7 +69,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Dropdown Menu */}
       {isOpen && (
         <motion.div
           initial={{ height: 0 }}
@@ -92,11 +85,11 @@ const Header = () => {
               Home
             </Link>
             <Link
-              to="/portfolio"
+              to="/cases"
               className="text-gray-800 hover:text-sky-600 transition font-bold"
               onClick={toggleMenu}
             >
-              Our Portfolio
+              Case Studies
             </Link>
             <Link
               to="/team"
@@ -113,15 +106,8 @@ const Header = () => {
               About Us
             </Link>
             <Link
-              to="/blogs"
-              className="text-gray-800 hover:text-sky-600 transition font-bold"
-              onClick={toggleMenu}
-            >
-              Blogs
-            </Link>
-            <Link
-              to="/contact"
-              className="bg-sky-600 text-white px-4 py-2 rounded-md hover:bg-sky-700 transition font-bold"
+              to="/#contact"
+              className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition font-bold"
               onClick={toggleMenu}
             >
               Contact Us
@@ -131,6 +117,10 @@ const Header = () => {
       )}
     </header>
   );
+};
+
+Header.propTypes = {
+  scrollToContact: PropTypes.func,
 };
 
 export default Header;

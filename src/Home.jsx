@@ -1,3 +1,5 @@
+import { useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
@@ -10,6 +12,15 @@ import StatisticsSection from "./components/StatisticsSection";
 import ContactForm from "./components/ContactForm";
 
 const Home = () => {
+  const contactRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#contact" && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
+
   return (
     <div className="scroll-smooth">
       <Header />
@@ -20,7 +31,9 @@ const Home = () => {
       <FAQSection />
       <HowWeWorkSection />
       <StatisticsSection />
-      <ContactForm />
+      <div ref={contactRef}>
+        <ContactForm />
+      </div>
       <Footer />
     </div>
   );

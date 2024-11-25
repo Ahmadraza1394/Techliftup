@@ -1,4 +1,6 @@
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { Link } from "react-router-dom";
 
 const Team = () => {
   return (
@@ -10,7 +12,7 @@ const Team = () => {
           <h2 className="text-4xl md:text-5xl font-bold  mb-4 text-red-500">
             Team Members
           </h2>
-          <p className="text-2xl text-justify max-w-3xl font-semibold text-gray-700 leading-relaxed">
+          <p className="text-2xl mb-8 text-justify max-w-3xl font-semibold text-gray-700 leading-relaxed">
             At TechLiftUp, we combine innovation and expertise to deliver
             cutting-edge solutions in software development, app creation,
             digital marketing, and MEP design. With over 5+ years of experience,
@@ -18,9 +20,12 @@ const Team = () => {
             tailored to their unique needs.
           </p>
 
-          <button className="mt-6 px-6 py-3 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition">
+          <Link
+            to="/#contact"
+            className="mt-6 px-6 py-3 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition"
+          >
             Contact Us
-          </button>
+          </Link>
         </div>
 
         <hr className="my-10  " />
@@ -77,6 +82,7 @@ const Team = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };
