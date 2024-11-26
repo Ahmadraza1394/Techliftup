@@ -25,7 +25,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-8 items-center">
+        <nav className="hidden md:flex space-x-8 items-center mr-4">
           <Link
             to="/"
             className="text-gray-800 hover:text-sky-600 transition font-bold"
@@ -52,7 +52,7 @@ const Header = () => {
           </Link>
           <Link
             to="/#contact"
-            className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition font-bold"
+            className="bg-red-600 text-white  px-4 py-2 rounded-md hover:bg-red-700 transition font-bold"
           >
             Contact Us
           </Link>
@@ -107,7 +107,7 @@ const Header = () => {
             </Link>
             <Link
               to="/#contact"
-              className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition font-bold"
+              className="bg-red-600 text-white  px-4 py-2 rounded-md hover:bg-red-700 transition font-bold"
               onClick={toggleMenu}
             >
               Contact Us

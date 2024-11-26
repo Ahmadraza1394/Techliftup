@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import {
   FaTrophy,
@@ -18,7 +17,7 @@ const AboutUsSection = () => {
           Who We Are
         </h2>
         <h1 className="text-5xl md:text-5xl font-bold mb-6 sm:leading-loose ">
-          Bridging Innovation in Software and Building Services Design
+          Bringing Innovation in Software and Building Services Design
         </h1>
         <p className="text-gray-300 leading-relaxed text-xl">
           TechLiftUp combines expertise in software development and building

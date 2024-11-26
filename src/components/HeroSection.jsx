@@ -32,10 +32,12 @@ const HeroSection = () => {
             Smart Digital & Engineering Solutions
           </span>
         </h1>
-        <p className="text-md md:text-lg lg:text-2xl text-gray-700 max-w-lg">
-          At TechLiftUp, we empower businesses with cutting-edge software
-          development and comprehensive building services engineering. From
-          innovation to execution, we’re your trusted partner.
+        <p className="text-md md:text-lg lg:text-2xl text-gray-700 max-w-4xl">
+          At TechLiftUp, we empower businesses through cutting-edge software
+          development, specializing in web development and app development to
+          drive digital transformation. Additionally, we excel in comprehensive
+          building design services . We’re your trusted partner for growth and
+          success
         </p>
         <div className="mt-6 flex space-x-4">
           <Link

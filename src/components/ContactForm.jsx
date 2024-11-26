@@ -2,9 +2,9 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 
 const ContactForm = () => {
-  const SERVICE_ID = "your_service_id"; // Replace with your EmailJS Service ID
-  const TEMPLATE_ID = "your_template_id"; // Replace with your EmailJS Template ID
-  const USER_ID = "your_user_id"; // Replace with your EmailJS User ID
+  const SERVICE_ID = "service_wuajhr5"; // Replace with your EmailJS Service ID
+  const TEMPLATE_ID = "template_6gguoa9"; // Replace with your EmailJS Template ID
+  const USER_ID = "tV4uPzjmtHiMmsQWh"; // Replace with your EmailJS User ID
 
   const [formData, setFormData] = useState({
     name: "",
@@ -36,7 +36,7 @@ const ContactForm = () => {
       (result) => {
         console.log(result.text);
         setIsSent(true);
-        setTimeout(() => setIsSent(false), 3000);
+        setTimeout(() => setIsSent(false), 15000);
         setFormData({
           name: "",
           email: "",
@@ -70,15 +70,6 @@ const ContactForm = () => {
         </a>{" "}
         with your inquiry.
       </p>
-
-      {isSent && (
-        <div className="mb-4 p-4 bg-green-100 text-green-700 rounded">
-          Your message has been sent successfully!
-        </div>
-      )}
-      {error && (
-        <div className="mb-4 p-4 bg-red-100 text-red-700 rounded">{error}</div>
-      )}
 
       <form
         className="grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -175,6 +166,16 @@ const ContactForm = () => {
           >
             Get a Quote
           </button>
+          {isSent && (
+            <div className="mb-4 p-4 bg-green-100 text-green-700 rounded">
+              Your message has been sent successfully!
+            </div>
+          )}
+          {error && (
+            <div className="mb-4 p-4 bg-red-100 text-red-700 rounded">
+              {error}
+            </div>
+          )}
         </div>
       </form>
     </section>
