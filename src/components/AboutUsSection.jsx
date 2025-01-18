@@ -43,7 +43,7 @@ const AboutUsSection = () => {
           className="bg-gray-800 p-6 rounded-lg shadow-lg text-center hover:bg-gray-700 transition duration-300"
         >
           <FaTrophy className="text-red-500 text-4xl mb-4 mx-auto" />
-          <h3 className="text-xl font-semibold mb-2">10+ Years of Expertise</h3>
+          <h3 className="text-xl font-semibold mb-2">15+ Years of Expertise</h3>
           <p className="text-gray-400">
             Decades of experience in delivering exceptional digital and
             engineering solutions.
@@ -58,10 +58,10 @@ const AboutUsSection = () => {
         >
           <FaProjectDiagram className="text-red-500 text-4xl mb-4 mx-auto" />
           <h3 className="text-xl font-semibold mb-2">
-            150+ Projects Delivered
+            500+ Projects Delivered
           </h3>
           <p className="text-gray-400">
-            Delivered over 150+ successful projects in digital platforms and MEP
+            Delivered over 500+ successful projects in digital platforms and MEP
             engineering design.
           </p>
         </motion.div>

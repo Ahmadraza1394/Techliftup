@@ -14,14 +14,14 @@ const testimonials = [
     name: "Roberto White",
     title: "Product Lead",
     position: "Product Development",
-    image: "/assets/images/testimonialProfile.jpg",
+    image: "/assets/images/profile.png",
     text: "TechLiftUp has an excellent attitude and is as honest as they come. We enjoyed working with them but as it turned out we were not the right fit for each other. I would recommend them to anyone needing competent Front End developers.",
   },
   {
     name: "Alexis Harper",
     title: "CTO, Innovate",
     position: "Project Management",
-    image: "/assets/images/testimonialProfile.jpg",
+    image: "/assets/images/profile.png",
     text: "Working with TechLiftUp was a seamless experience. They provided top-notch technical expertise and a clear understanding of our goals. We achieved our objectives with great efficiency.",
   },
 ];

@@ -43,14 +43,20 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold">KSA Office</h4>
             <p>Riyadh, Saudia Arabia</p>
+            <p>Phone: +966 58 363 9195</p>
           </div>{" "}
-          <div className="mb-4">
+          <div className="mb-2">
             <h4 className="font-semibold">Pakistan Office</h4>
+            <p>Islamabad, Pakistan</p>
+            <p>Phone: +92 3238388294</p>
+          </div>
+          <div className="mb-1">
+            <h4 className="font-semibold">Mexico Office</h4>
             <p>
-              New City Phase 2
-              <br />
-              47000 Islamabad, Pakistan
+              Bahia Xaak, D 301, Turquesa Tower, Puerto Aventuras, Quintana Roo,
+              Mexico
             </p>
+            <p>Phone: +52 1 998 347 3271</p>
           </div>
         </div>
 
