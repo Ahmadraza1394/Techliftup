@@ -1,6 +1,8 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
+import CallToAction from "./components/CallToAction";
+import Whatsapp from "./components/Whatsapp";
 
 const Team = () => {
   return (
@@ -115,6 +117,9 @@ const Team = () => {
           </div>
         </div>
       </section>
+
+      <CallToAction />
+      <Whatsapp />
       <Footer />
     </>
   );

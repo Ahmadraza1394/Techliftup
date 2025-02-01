@@ -87,7 +87,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="mt-10 border-t pt-6 text-center text-sm text-gray-600">
         <p>
-          © 2024, TechLiftUp Pvt Ltd. Made with passion by{" "}
+          © {new Date().getFullYear()}, TechLiftUp Pvt Ltd. Made with passion by{" "}
           <span className="text-red-600 font-semibold">TechLiftUp</span>
         </p>
       </div>

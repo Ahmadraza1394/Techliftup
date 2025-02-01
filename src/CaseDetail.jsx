@@ -1,11 +1,13 @@
 import { Link, useParams } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import CallToAction from "./components/CallToAction";
+import Whatsapp from "./components/Whatsapp";
 
 const caseData = {
   "cabo-shark-dive": {
     title: "Cabo Shark Dive ",
-    image: "/assets/images/caboshark2.png", // Replace with the actual path
+    image: "/assets/images/cabosharkdive.png", // Replace with the actual path
     overview:
       "Cabo Shark Dive, a renowned shark diving company in Los Cabos, required a responsive, user-friendly website to showcase its world-class shark diving and snorkeling tours. The goal was to provide visitors with a seamless experience for learning about tours, booking trips, and contacting the company.",
     objectives: [
@@ -38,7 +40,7 @@ const caseData = {
   },
   "cruise-car-fly": {
     title: "Cruise Car Fly  ",
-    image: "/assets/images/cruisecarfly2.png", // Corrected path
+    image: "/assets/images/cruisecarfly.png", // Corrected path
     overview:
       "CruiseCarFly is an affiliate landing page for deals on cruises, car rentals, and flights. The project aimed to increase Google visibility, enhance user experience, and drive conversions.",
     problem:
@@ -66,7 +68,7 @@ const caseData = {
   },
   "brand-wave-digital": {
     title: "Brand Wave Digital",
-    image: "/assets/images/brandwavedigital2.png", // Corrected path
+    image: "/assets/images/brandwavedigital.png", // Corrected path
     overview:
       "Brand Wave Digital, based in the UAE, specializes in lead generation through targeted social media advertising. The agency guarantees high-quality, quote-ready leads within 30 days, allowing businesses to focus on operations while ensuring growth.",
     objectives: [
@@ -92,6 +94,35 @@ const caseData = {
     conclusion:
       "With a risk-free guarantee and industry-specific expertise, Brand Wave Digital empowers businesses to achieve efficient, scalable growth through effective lead generation.",
     website: "https://digitalmarkeeting.netlify.app/",
+  },
+  visteai: {
+    title: "Visteai AI Assistant",
+    image: "/assets/images/visteai.png",
+    overview:
+      "Visteai is a results-driven digital marketing agency that helps businesses scale through data-driven advertising strategies. By leveraging precision targeting and AI-powered analytics, they ensure high-quality leads and measurable ROI for clients across various industries.",
+    objectives: [
+      "Drive consistent, high-intent leads for businesses.",
+      "Implement data-backed marketing strategies for scalable growth.",
+      "Optimize ad performance through AI-driven analytics.",
+    ],
+    challenges: [
+      "Businesses struggling with ineffective lead generation strategies.",
+      "Difficulty optimizing ad spend for maximum returns.",
+      "Lack of automation in lead qualification and follow-ups.",
+    ],
+    approach: [
+      "Market Research: Conducting in-depth analysis to identify high-converting audience segments.",
+      "Strategic Ad Placement: Utilizing AI-driven bidding strategies to optimize ad spend.",
+      "Automated Lead Nurturing: Implementing chatbots and CRM integrations to engage leads instantly.",
+    ],
+    results: [
+      "Increased Lead Quality: Higher conversion rates with pre-qualified prospects.",
+      "Optimized Ad Spend: Reduced cost per acquisition through targeted campaigns.",
+      "Scalable Growth: Businesses achieved consistent lead flow without manual effort.",
+    ],
+    conclusion:
+      "By combining AI-driven insights with strategic marketing, Visteai empowers businesses to attract high-quality leads, optimize ad budgets, and scale efficiently in competitive markets.",
+    website: "https://visteai.netlify.app/",
   },
 };
 const CaseDetail = () => {
@@ -136,7 +167,7 @@ const CaseDetail = () => {
         <img
           src={image}
           alt={title}
-          className="w-2/4 h-auto rounded-lg mb-10 shadow-md"
+          className="w-2/2 h-auto rounded-lg mb-10 shadow-md"
         />
         <div className="mb-10">
           <h2 className="text-4xl font-semibold text-sky-500 mb-6">Overview</h2>
@@ -228,6 +259,9 @@ const CaseDetail = () => {
           </div>
         )}
       </section>
+
+      <CallToAction />
+      <Whatsapp />
       <Footer />
     </>
   );

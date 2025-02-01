@@ -33,6 +33,12 @@ const Header = () => {
             Home
           </Link>
           <Link
+            to="/services"
+            className="text-gray-800 hover:text-sky-600 transition font-bold"
+          >
+            Services
+          </Link>
+          <Link
             to="/cases"
             className="text-gray-800 hover:text-sky-600 transition font-bold"
           >
@@ -83,6 +89,13 @@ const Header = () => {
               onClick={toggleMenu}
             >
               Home
+            </Link>
+            <Link
+              to="/services"
+              className="text-gray-800 hover:text-sky-600 transition font-bold"
+              onClick={toggleMenu}
+            >
+              Services
             </Link>
             <Link
               to="/cases"

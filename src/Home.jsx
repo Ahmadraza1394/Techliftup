@@ -10,6 +10,8 @@ import FAQSection from "./components/FAQSection";
 import HowWeWorkSection from "./components/HowWeWorkSection";
 import StatisticsSection from "./components/StatisticsSection";
 import ContactForm from "./components/ContactForm";
+import CallToAction from "./components/CallToAction";
+import Whatsapp from "./components/Whatsapp";
 
 const Home = () => {
   const contactRef = useRef(null);
@@ -34,6 +36,8 @@ const Home = () => {
       <div ref={contactRef}>
         <ContactForm />
       </div>
+      <CallToAction />
+      <Whatsapp />
       <Footer />
     </div>
   );

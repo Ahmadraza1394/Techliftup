@@ -111,33 +111,38 @@ const ContactForm = () => {
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-sm font-semibold">Phone</label>
+          <label className="text-sm font-semibold">Phone/Whatsapp*</label>
           <input
             type="tel"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
             placeholder="Your phone number"
+            required
             className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-sm font-semibold">Subject</label>
+          <label className="text-sm font-semibold">Subject*</label>
           <input
             type="text"
             name="subject"
             value={formData.subject}
             onChange={handleChange}
             placeholder="Subject"
+            required
             className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-sm font-semibold">Choose a Budget (USD)</label>
+          <label className="text-sm font-semibold">
+            Choose a Budget (USD)*
+          </label>
           <select
             name="budget"
             value={formData.budget}
             onChange={handleChange}
+            required
             className="p-3 mt-1 rounded-md border bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             <option value="">Select budget</option>

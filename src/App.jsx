@@ -12,6 +12,7 @@ import Team from "./Team"; // Corrected path
 import "./assets/styles/index.css"; // Corrected path
 
 import CaseDetail from "./CaseDetail";
+import Services from "./Services";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,6 +30,8 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />{" "}
+        {/* Add About route */}
         <Route path="/about" element={<About />} /> {/* Add About route */}
         <Route path="/team" element={<Team />} /> {/* Add Team route */}
         <Route path="/cases" element={<Cases />} />

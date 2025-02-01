@@ -4,21 +4,6 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-between bg-gray-100 text-dark min-h-screen px-6 md:px-16 lg:px-20 pt-24 pb-10">
-      {/* Left Side: Circular Image with Overlay */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-        className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl flex-shrink-0 mb-8 md:mb-0 md:mr-10"
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/20 z-10 rounded-full"></div>
-        <img
-          src="/assets/images/heroImg.jpg"
-          alt="Team working on a project"
-          className="object-cover w-full h-full"
-        />
-      </motion.div>
-
       {/* Right Side: Text Content */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
@@ -53,6 +38,21 @@ const HeroSection = () => {
             Contact Us
           </a>
         </div>
+      </motion.div>
+
+      {/* Left Side: Circular Image with Overlay */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl flex-shrink-0 mb-8 md:mb-0 mt-8 md:mr-10"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/20 z-10 rounded-full"></div>
+        <img
+          src="/assets/images/heroImg.jpg"
+          alt="Team working on a project"
+          className="object-cover w-full h-full"
+        />
       </motion.div>
     </section>
   );
