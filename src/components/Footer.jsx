@@ -3,7 +3,7 @@ import logo from "/assets/images/logo.png";
 import {
   FaFacebookF,
   FaInstagram,
-  FaTwitter,
+  // FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
 
@@ -21,17 +21,26 @@ const Footer = () => {
             />{" "}
             {/* Adjust height as needed */}
           </Link>
-          <div className="flex space-x-4 text-red-600">
-            <a href="#" aria-label="Facebook">
+          <div className="flex justify-center space-x-5 text-red-600">
+            <a
+              href="https://www.facebook.com/people/Techliftup-Pvt-Limited/61572675072301/"
+              aria-label="Facebook"
+            >
               <FaFacebookF />
             </a>
-            <a href="#" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com/techliftup/"
+              aria-label="Instagram"
+            >
               <FaInstagram />
             </a>
-            <a href="#" aria-label="Twitter">
+            {/* <a href="#" aria-label="Twitter">
               <FaTwitter />
-            </a>
-            <a href="#" aria-label="LinkedIn">
+            </a> */}
+            <a
+              href="https://www.linkedin.com/company/techliftup/"
+              aria-label="LinkedIn"
+            >
               <FaLinkedinIn />
             </a>
           </div>

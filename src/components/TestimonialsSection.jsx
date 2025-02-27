@@ -5,7 +5,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const testimonials = [
   {
     name: "Jesus Pittman",
-    title: "Co-founder, Colabrio",
+    title: "Co-founder",
     position: "Product Development",
     image: "/assets/images/testimonialProfile.jpg",
     text: "TechLiftUp is very good at collaborative experience and quality work. Great attention to detail and deadlines with excellent communication. Looking forward to working together again. Highly recommended.",
@@ -19,10 +19,24 @@ const testimonials = [
   },
   {
     name: "Alexis Harper",
-    title: "CTO, Innovate",
+    title: "CTO",
     position: "Project Management",
     image: "/assets/images/profile.png",
     text: "Working with TechLiftUp was a seamless experience. They provided top-notch technical expertise and a clear understanding of our goals. We achieved our objectives with great efficiency.",
+  },
+  {
+    name: "Emilimattar",
+    title: "Software Developer",
+    position: "Software Solutions",
+    image: "/assets/images/profile.png",
+    text: "Exceptional service! The TechLiftUp team transformed our outdated website into a high-performing, modern platform. The entire process was smooth, and the results exceeded expectations.",
+  },
+  {
+    name: "Michael ",
+    title: "Marketing Director",
+    position: "Marketing & SEO",
+    image: "/assets/images/profile.png",
+    text: "Thanks to TechLiftUp, our SEO rankings skyrocketed, and we saw a 50% increase in organic traffic. Their expertise in digital marketing is top-notch.",
   },
 ];
 

@@ -20,7 +20,8 @@ import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
 
 import { useState } from "react";
-import Whatsapp from "./components/Whatsapp";
+
+import WhatsappButton from "./components/WhatsappButton";
 
 // const approaches = [
 //   {
@@ -230,7 +231,7 @@ export default function Services() {
               animate={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05 }} // Added hover animation
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="bg-cyan-600 rounded-3xl p-5 shadow flex flex-col items-start"
+              className="bg-[#21B6DE] rounded-3xl p-5 shadow flex flex-col items-start"
             >
               <div className="text-red-500 bg-gray-100 rounded-2xl p-3 text-5xl mb-6">
                 {service.icon}
@@ -248,7 +249,7 @@ export default function Services() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold flex items-center justify-center my-4 mb-10 text-gray-800">
           Our Approach
         </h2>
-        <div className="bg-cyan-700 text-white p-2 sm:p-8 py-12 sm:py-12 rounded-2xl max-w-6xl mx-auto relative overflow-hidden">
+        <div className="bg-[#21B6DE] text-white p-2 sm:p-8 py-12 sm:py-12 rounded-2xl max-w-6xl mx-auto relative overflow-hidden">
           {/* Decorative Background Elements */}
           <div className="absolute top-0 left-0 w-24 h-24 bg-red-500 rounded-br-md"></div>
           <div className="absolute bottom-0 right-0 w-52 h-24 bg-cyan-500 rounded-tl-lg"></div>
@@ -393,7 +394,7 @@ export default function Services() {
           </a>
         </div>
       </section>
-      <Whatsapp />
+      <WhatsappButton />
 
       <Footer />
     </>

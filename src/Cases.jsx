@@ -5,7 +5,8 @@ import Header from "./components/Header";
 import { motion } from "framer-motion";
 
 import { Link } from "react-router-dom";
-import Whatsapp from "./components/Whatsapp";
+
+import WhatsappButton from "./components/WhatsappButton";
 
 const cases = [
   {
@@ -142,7 +143,7 @@ const Cases = () => {
       </section>
 
       <CallToAction />
-      <Whatsapp />
+      <WhatsappButton />
       <Footer />
     </>
   );

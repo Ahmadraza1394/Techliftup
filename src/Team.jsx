@@ -2,7 +2,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
 import CallToAction from "./components/CallToAction";
-import Whatsapp from "./components/Whatsapp";
+
+import WhatsappButton from "./components/WhatsappButton";
 
 const Team = () => {
   return (
@@ -48,12 +49,14 @@ const Team = () => {
               <img
                 src="/assets/images/sabir.jpeg"
                 alt="Muhammad Sabir"
-                className="w-full h-64 rounded-xl object-cover object-top shadow-black shadow-sm"
+                className="w-full h-64 rounded-full object-cover object-top shadow-black shadow-sm"
               />
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Muhammad Sabir
               </h3>
-              <p className="text-gray-500 text-lg">CTO & MEP Design Head</p>
+              <p className="text-gray-500 text-lg">
+                Building Services Engineering Design Consultant
+              </p>
               <p className="mt-2 text-gray-600 text-lg">
                 Expert in MEP systems design with extensive experience in
                 sustainable building solutions and energy optimization.
@@ -63,9 +66,9 @@ const Team = () => {
             {/* <!-- Team Member 2 --> */}
             <div className="text-center">
               <img
-                src="/assets/images/ahmad.jpg"
+                src="/assets/images/ahmadimg.png"
                 alt="Ahmad Raza"
-                className="w-full h-64 rounded-xl object-cover object-top"
+                className="w-full h-64 rounded-full object-cover object-top"
               />
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Ahmad Raza
@@ -84,7 +87,7 @@ const Team = () => {
               <img
                 src="/assets/images/qadeer.png"
                 alt="Qadeer Ahmad"
-                className="w-full h-64 rounded-xl object-cover object-top  shadow-dark shadow-md"
+                className="w-full h-64 rounded-full object-cover object-top  shadow-dark shadow-md"
               />
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Qadeer Ahmad
@@ -101,7 +104,7 @@ const Team = () => {
               <img
                 src="/assets/images/saul.jpeg"
                 alt="Saul Chac"
-                className="w-full h-64 rounded-xl object-cover object-top"
+                className="w-full h-64 rounded-full object-cover object-top"
               />
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Saul Chac
@@ -119,7 +122,7 @@ const Team = () => {
       </section>
 
       <CallToAction />
-      <Whatsapp />
+      <WhatsappButton />
       <Footer />
     </>
   );

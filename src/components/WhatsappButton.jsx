@@ -1,6 +1,6 @@
 import { FaWhatsapp } from "react-icons/fa";
 
-export default function Whatsapp() {
+export default function WhatsappButton() {
   const handleClick = () => {
     window.open("https://wa.me/923238388294", "_blank");
   };

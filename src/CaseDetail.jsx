@@ -2,7 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import CallToAction from "./components/CallToAction";
-import Whatsapp from "./components/Whatsapp";
+
+import WhatsappButton from "./components/WhatsappButton";
 
 const caseData = {
   "cabo-shark-dive": {
@@ -261,7 +262,7 @@ const CaseDetail = () => {
       </section>
 
       <CallToAction />
-      <Whatsapp />
+      <WhatsappButton />
       <Footer />
     </>
   );

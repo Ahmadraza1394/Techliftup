@@ -10,8 +10,9 @@ import FAQSection from "./components/FAQSection";
 import HowWeWorkSection from "./components/HowWeWorkSection";
 import StatisticsSection from "./components/StatisticsSection";
 import ContactForm from "./components/ContactForm";
+
+import WhatsappButton from "./components/WhatsappButton";
 import CallToAction from "./components/CallToAction";
-import Whatsapp from "./components/Whatsapp";
 
 const Home = () => {
   const contactRef = useRef(null);
@@ -27,6 +28,7 @@ const Home = () => {
     <div className="scroll-smooth">
       <Header />
       <HeroSection />
+
       <AboutUsSection />
       <TechnologiesSection />
       <TestimonialsSection />
@@ -37,7 +39,7 @@ const Home = () => {
         <ContactForm />
       </div>
       <CallToAction />
-      <Whatsapp />
+      <WhatsappButton />
       <Footer />
     </div>
   );

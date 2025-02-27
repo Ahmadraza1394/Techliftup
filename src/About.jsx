@@ -1,20 +1,10 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import {
-  FaBolt,
-  FaBullhorn,
-  FaCode,
-  FaCogs,
-  FaFireExtinguisher,
-  FaMobileAlt,
-  FaShower,
-  FaTools,
-  FaWater,
-  FaWind,
-} from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 import CallToAction from "./components/CallToAction";
-import Whatsapp from "./components/Whatsapp";
+
+import WhatsappButton from "./components/WhatsappButton";
 
 const About = () => {
   return (
@@ -24,10 +14,16 @@ const About = () => {
         {/* About Us Section */}
         <div className="text-left mb-16">
           <h2 className="text-5xl font-bold text-red-500 mb-6">About Us</h2>
-          <p className="text-2xl mb-7 font-semibold text-justify max-w-3xl leading-relaxed">
+          {/* <p className="text-2xl  font-semibold text-justify max-w-3xl leading-relaxed">
             TechLiftUp helps businesses grow by using advanced technology and
             smart building solutions. We focus on creating future success with
             innovative and precise ideas.
+          </p> */}
+          <p className="text-2xl mb-7 font-semibold text-justify max-w-3xl leading-relaxed">
+            TechLiftUp is a legally registered and certified company, recognized
+            by the relevant authorities. Our official registration reflects our
+            commitment to professionalism, transparency, and excellence in every
+            service we provide.
           </p>
           <Link
             to="/#contact"
@@ -106,7 +102,7 @@ const About = () => {
       </section>
 
       <CallToAction />
-      <Whatsapp />
+      <WhatsappButton />
       <Footer />
     </>
   );
