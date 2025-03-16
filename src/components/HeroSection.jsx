@@ -62,7 +62,7 @@ const HeroSection = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }} // Fixed the syntax error here
         transition={{ duration: 1, ease: "easeInOut" }}
-        className="relative hidden sm:block w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl flex-shrink-0 mb-8 md:mb-0 mt-8 md:mr-10"
+        className="relative  sm:block w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl flex-shrink-0 mb-8 md:mb-0 mt-8 md:mr-10"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/20 z-10 rounded-full"></div>
         <img

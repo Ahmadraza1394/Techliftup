@@ -13,6 +13,8 @@ import ContactForm from "./components/ContactForm";
 
 import WhatsappButton from "./components/WhatsappButton";
 import CallToAction from "./components/CallToAction";
+import LogoSlider from "./components/LogoSlider";
+import OurProcess from "./components/OurProcess";
 
 const Home = () => {
   const contactRef = useRef(null);
@@ -29,12 +31,14 @@ const Home = () => {
       <Header />
       <HeroSection />
 
+      <LogoSlider />
       <AboutUsSection />
       <TechnologiesSection />
       <TestimonialsSection />
       <FAQSection />
       <HowWeWorkSection />
       <StatisticsSection />
+      <OurProcess />
       <div ref={contactRef}>
         <ContactForm />
       </div>

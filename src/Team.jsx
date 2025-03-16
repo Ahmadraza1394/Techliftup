@@ -39,18 +39,17 @@ const Team = () => {
           <h3 className="text-2xl md:text-3xl font-semibold text-red-500 mb-8 my-8">
             Meet the Experts Behind TechLiftUp
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* <!-- Grid for team members --> */}
-          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* <!-- Team Member 1 --> */}
             <div className="text-center">
-              <img
-                src="/assets/images/sabir.jpeg"
-                alt="Muhammad Sabir"
-                className="w-full h-64 rounded-full object-cover object-top shadow-black shadow-sm"
-              />
+              <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
+                <img
+                  src="/assets/images/sabir.jpeg"
+                  alt="Muhammad Sabir"
+                  className="w-full h-full object-cover object-top shadow-black shadow-sm"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Muhammad Sabir
               </h3>
@@ -65,11 +64,13 @@ const Team = () => {
 
             {/* <!-- Team Member 2 --> */}
             <div className="text-center">
-              <img
-                src="/assets/images/ahmadimg.png"
-                alt="Ahmad Raza"
-                className="w-full h-64 rounded-full object-cover object-top"
-              />
+              <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
+                <img
+                  src="/assets/images/ahmadimg.png"
+                  alt="Ahmad Raza"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Ahmad Raza
               </h3>
@@ -84,11 +85,13 @@ const Team = () => {
 
             {/* <!-- Team Member 3 --> */}
             <div className="text-center">
-              <img
-                src="/assets/images/qadeer.png"
-                alt="Qadeer Ahmad"
-                className="w-full h-64 rounded-full object-cover object-top  shadow-dark shadow-md"
-              />
+              <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
+                <img
+                  src="/assets/images/qadeer.png"
+                  alt="Qadeer Ahmad"
+                  className="w-full h-full object-cover object-top shadow-dark shadow-md"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Qadeer Ahmad
               </h3>
@@ -101,11 +104,13 @@ const Team = () => {
 
             {/* <!-- Team Member 4 --> */}
             <div className="text-center">
-              <img
-                src="/assets/images/saul.jpeg"
-                alt="Saul Chac"
-                className="w-full h-64 rounded-full object-cover object-top"
-              />
+              <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
+                <img
+                  src="/assets/images/saul.jpeg"
+                  alt="Saul Chac"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Saul Chac
               </h3>

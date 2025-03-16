@@ -46,120 +46,120 @@ const TechnologiesSection = () => {
     Frontend: [
       {
         name: "React",
-        icon: <FaReact className="text-4xl" />,
+        icon: <FaReact className="text-sky-700 text-4xl" />,
         app: "Used for dynamic web applications like Facebook & Airbnb.",
       },
       {
         name: "Angular",
-        icon: <FaAngular className="text-4xl" />,
+        icon: <FaAngular className="text-red-600 text-4xl" />,
         app: "Great for enterprise applications like Gmail.",
       },
       {
         name: "Vue",
-        icon: <FaVuejs className="text-4xl" />,
+        icon: <FaVuejs className="text-green-600 text-4xl" />,
         app: "Lightweight & powerful, used in Alibaba & Behance.",
       },
       {
         name: "jQuery",
-        icon: <SiJquery className="text-4xl" />,
+        icon: <SiJquery className="text-blue-400 text-4xl" />,
         app: "Simplifies JavaScript for interactive web elements.",
       },
       {
         name: "TypeScript",
-        icon: <SiTypescript className="text-4xl" />,
+        icon: <SiTypescript className="text-blue-600 text-4xl" />,
         app: "Ensures error-free coding in large projects.",
       },
     ],
     Mobile: [
       {
         name: "iOS",
-        icon: <FaApple className="text-4xl" />,
+        icon: <FaApple className="text-gray-800 text-4xl" />,
         app: "Native iPhone app development for seamless performance.",
       },
       {
         name: "Android",
-        icon: <FaAndroid className="text-4xl" />,
+        icon: <FaAndroid className="text-green-600 text-4xl" />,
         app: "Powering apps like WhatsApp and Uber.",
       },
       {
         name: "Kotlin",
-        icon: <SiKotlin className="text-4xl" />,
+        icon: <SiKotlin className="text teal-600 text-4xl" />,
         app: "Google’s preferred language for Android apps.",
       },
       {
         name: "Flutter",
-        icon: <SiFlutter className="text-4xl" />,
+        icon: <SiFlutter className="text-blue-400 text-4xl" />,
         app: "One codebase for iOS & Android, used in Google Pay.",
       },
       {
         name: "Java",
-        icon: <FaJava className="text-4xl" />,
+        icon: <FaJava className="text-red-600 text-4xl" />,
         app: "Backend of leading mobile apps like Twitter & Spotify.",
       },
     ],
     Backend: [
       {
         name: "Node.js",
-        icon: <FaNodeJs className="text-4xl" />,
+        icon: <FaNodeJs className="text-green-600 text-4xl" />,
         app: "Used in Netflix & LinkedIn for fast performance.",
       },
       {
         name: "PHP / Laravel",
-        icon: <SiPhp className="text-4xl" />,
+        icon: <SiPhp className="text-purple-600 text-4xl" />,
         app: "Powers 78% of websites including Facebook.",
       },
       {
         name: "Python / Django",
-        icon: <SiPython className="text-4xl" />,
+        icon: <SiPython className="text-yellow-400 text-4xl" />,
         app: "Runs Instagram & YouTube’s backend.",
       },
       {
         name: "Java",
-        icon: <FaJava className="text-4xl" />,
+        icon: <FaJava className="text-red-600 text-4xl" />,
         app: "Supports enterprise software like banking applications.",
       },
     ],
     Database: [
       {
         name: "MySQL / PostgreSQL",
-        icon: <SiMysql className="text-4xl" />,
+        icon: <SiMysql className="text-blue-600 text-4xl" />,
         app: "Manages data for Uber & Netflix.",
       },
       {
         name: "MongoDB",
-        icon: <SiMongodb className="text-4xl" />,
+        icon: <SiMongodb className="text-green-600 text-4xl" />,
         app: "NoSQL database used in e-commerce platforms.",
       },
       {
         name: "Tableau",
-        icon: <SiTableau className="text-4xl" />,
+        icon: <SiTableau className="text-blue-600 text-4xl" />,
         app: "Transforms raw data into actionable insights.",
       },
     ],
     "Building Services": [
       {
         name: "BIM",
-        icon: <SiAutodesk className="text-4xl" />,
+        icon: <SiAutodesk className="text-red-600 text-4xl" />,
         app: "3D modeling for efficient building design.",
       },
       {
         name: "AutoCAD",
-        icon: <SiAutodesk className="text-4xl" />,
+        icon: <SiAutodesk className="text-red-600 text-4xl" />,
         app: "Industry standard for architectural design.",
       },
       {
         name: "Mechanical Systems",
-        icon: <FaCogs className="text-4xl" />,
+        icon: <FaCogs className="text-gray-600 text-4xl" />,
         app: "Used in HVAC system planning.",
       },
       {
         name: "Electrical Design",
-        icon: <FaBolt className="text-4xl" />,
+        icon: <FaBolt className="text-yellow-500 text-4xl" />,
         app: "Designs power distribution in smart buildings.",
       },
       {
         name: "Plumbing Systems",
-        icon: <FaWater className="text-4xl" />,
+        icon: <FaWater className="text-blue-600 text-4xl" />,
         app: "Essential for water supply planning.",
       },
     ],
