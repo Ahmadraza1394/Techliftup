@@ -15,6 +15,7 @@ import WhatsappButton from "./components/WhatsappButton";
 import CallToAction from "./components/CallToAction";
 import LogoSlider from "./components/LogoSlider";
 import OurProcess from "./components/OurProcess";
+import Chatbot from "./components/Chatbot";
 
 const Home = () => {
   const contactRef = useRef(null);
@@ -30,7 +31,7 @@ const Home = () => {
     <div className="scroll-smooth">
       <Header />
       <HeroSection />
-
+      <Chatbot />
       <LogoSlider />
       <AboutUsSection />
       <TechnologiesSection />
