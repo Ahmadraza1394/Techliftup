@@ -5,9 +5,9 @@ import chatRoutes from "./routes/chatRoutes.js";
 import admin from "firebase-admin";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-const serviceAccount = require("./config/techliftupchatbotlead-firebase-adminsdk-fbsvc-54aca04264.json");
-
+// const serviceAccount = require("./config/techliftupchatbotlead-firebase-adminsdk-fbsvc-54aca04264.json");
 dotenv.config();
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
 // Initialize Firebase Admin
 admin.initializeApp({
@@ -22,8 +22,10 @@ const port = process.env.PORT || 5000;
 // Configure CORS
 const allowedOrigins = [
   process.env.FRONTEND_URL,
-  "http://localhost:3000",
-  "http://localhost:5173",
+  "https://test.techliftup.com",
+  "http://www.test.techliftup.com",
+  "https://techliftup.com",
+  "https://www.techliftup.com",
 ].filter(Boolean);
 
 app.use(

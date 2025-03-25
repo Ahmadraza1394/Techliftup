@@ -6,7 +6,7 @@ export default function WhatsappButton() {
   };
 
   return (
-    <div className="fixed bg-green-600 w-16 h-16 rounded-full bottom-6 right-4 flex flex-col items-center">
+    <div className="fixed bg-green-600 w-16 h-16 rounded-full bottom-6 left-4 flex flex-col items-center">
       <FaWhatsapp
         className="text-gray-100 text-5xl mt-2 cursor-pointer animate-pulse"
         onClick={handleClick}

@@ -8,7 +8,9 @@ export default function CallToAction() {
 
       <div className="mt-6">
         <a
-          href="/#contact"
+          href="https://calendly.com/ahmadraza13941394/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center px-6 py-3 bg-white text-black text-lg font-medium rounded-full shadow-md hover:bg-gray-200 transition"
         >
           Free consultation

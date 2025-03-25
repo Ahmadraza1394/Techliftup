@@ -33,7 +33,7 @@ const LeadsDashboard = () => {
   const [chartType, setChartType] = useState("bar"); // bar or pie
   const [selectedMonth, setSelectedMonth] = useState("all"); // for CSV export
   const [currentPage, setCurrentPage] = useState(1);
-  const [leadsPerPage] = useState(7);
+  const [leadsPerPage] = useState(14);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -44,11 +44,14 @@ const LeadsDashboard = () => {
     console.log("Authorization header:", authHeader);
 
     try {
-      const response = await axios.get("http://localhost:5000/leads", {
-        headers: {
-          Authorization: authHeader,
-        },
-      });
+      const response = await axios.get(
+        "https://techliftup-backend.vercel.app/leads",
+        {
+          headers: {
+            Authorization: authHeader,
+          },
+        }
+      );
       console.log("Response from backend:", response.data);
       setLeads(response.data);
       setIsAuthenticated(true);

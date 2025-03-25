@@ -10,8 +10,13 @@ const Chatbot = () => {
   const [emailError, setEmailError] = useState("");
   const [userMessage, setUserMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Hello! May I have your name, please?" },
+    {
+      role: "assistant",
+      content:
+        "Hi! Just in case we get disconnected, could you share your name and email? This helps us stay in touch and assist you better.",
+    },
   ]);
 
   const messagesEndRef = useRef(null);
@@ -26,6 +31,8 @@ const Chatbot = () => {
   };
 
   const handleInfoSubmit = async () => {
+    if (isLoading) return;
+
     if (!name) {
       alert("Please provide your name.");
       return;
@@ -39,29 +46,28 @@ const Chatbot = () => {
       return;
     }
     setEmailError("");
+    setIsLoading(true);
 
-    // Send a "start chat" message to the backend to trigger the lead notification
     try {
       const startChatMessage = [{ role: "user", content: "Start chat" }];
-      await axios.post("http://localhost:5000/chat", {
+      await axios.post("https://techliftup-backend.vercel.app/chat", {
         messages: startChatMessage,
         name,
         email,
       });
     } catch (error) {
       console.error("Error sending lead notification:", error);
-      // Proceed to chat even if the lead notification fails
+    } finally {
+      setMessages([
+        ...messages,
+        {
+          role: "assistant",
+          content: `Nice to meet you, ${name}! How can I assist you today?`,
+        },
+      ]);
+      setStep("chat");
+      setIsLoading(false);
     }
-
-    // Update messages and transition to chat stage
-    setMessages([
-      ...messages,
-      {
-        role: "assistant",
-        content: `Nice to meet you, ${name}! How can I assist you today?`,
-      },
-    ]);
-    setStep("chat");
   };
 
   const handleSubmit = async () => {
@@ -76,19 +82,19 @@ const Chatbot = () => {
     setIsTyping(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/chat", {
-        messages: updatedMessages.filter((msg) => msg.role !== "system"),
-        name,
-        email,
-      });
+      const response = await axios.post(
+        "https://techliftup-backend.vercel.app/chat",
+        {
+          messages: updatedMessages.filter((msg) => msg.role !== "system"),
+          name,
+          email,
+        }
+      );
 
-      // Improved link handling - split by sentences first
       const sentences = response.data.reply.split(/(?<=\.|\?|\!)\s+/);
       const processedSentences = sentences.map((sentence) => {
         return sentence.replace(/(https?:\/\/[^\s]+)/g, (match) => {
-          // Check if the URL is already wrapped in HTML
           if (match.includes("href=")) return match;
-          // Remove trailing punctuation from URL
           const cleanUrl = match.replace(/[.,!?]$/, "");
           return `<a href="${cleanUrl}" target="_blank" class="text-blue-500 underline">${cleanUrl}</a>${match.slice(
             cleanUrl.length
@@ -121,13 +127,13 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-50">
+    <div className="fixed bottom-6 right-5 z-50">
       {!isChatbotOpen && (
         <button
           onClick={() => setIsChatbotOpen(true)}
           className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-4 rounded-full shadow-lg hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 transform hover:scale-105 animate-pulse"
         >
-          <FaRobot size={24} />
+          <FaRobot size={32} />
         </button>
       )}
 
@@ -229,9 +235,14 @@ const Chatbot = () => {
                 </div>
                 <button
                   onClick={handleInfoSubmit}
-                  className="w-full p-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 transform hover:translate-y-[-2px] shadow-md"
+                  disabled={isLoading}
+                  className={`w-full p-3 rounded-lg transition-all duration-300 transform hover:translate-y-[-2px] shadow-md ${
+                    isLoading
+                      ? "bg-gradient-to-r from-blue-600 to-indigo-700 text-white cursor-not-allowed"
+                      : "bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:from-blue-700 hover:to-indigo-800"
+                  }`}
                 >
-                  Start Chatting
+                  {isLoading ? "Processing..." : "Start Chatting"}
                 </button>
               </div>
             ) : (

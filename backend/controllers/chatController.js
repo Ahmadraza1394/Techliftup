@@ -9,10 +9,11 @@ export class ChatController {
 
   static async testEmail(req, res) {
     try {
-      const result = await EmailService.sendTestEmail();
+      const emailService = new EmailService(); // No db needed for testEmail
+      const result = await emailService.sendTestEmail(); // Sends a test email to verify email configuration
       res.status(200).send(result);
     } catch (error) {
-      res.status(500).send(error.message);
+      res.status(500).send(error.message); // Handle any errors that occur during email sending
     }
   }
 
@@ -20,9 +21,9 @@ export class ChatController {
     console.log("Received request to /chat");
     console.log("Request body:", req.body);
 
-    const { messages, email, name } = req.body;
+    const { messages, email, name } = req.body; // Destructure the request body to get messages, email, and name
     const db = req.db; // Firestore instance from middleware
-    const leadModel = new LeadModel(db);
+    const leadModel = new LeadModel(db); // Create an instance of LeadModel to interact with Firestore
 
     // Get the client's IP address
     const ipAddress =
@@ -31,9 +32,9 @@ export class ChatController {
 
     // Check rate limit for the IP address
     try {
-      await leadModel.checkRateLimit(ipAddress);
+      await leadModel.checkRateLimit(ipAddress); // Check if the IP address has exceeded the rate limit
     } catch (error) {
-      return res.status(429).send(error.message); // 429 Too Many Requests
+      return res.status(429).send(error.message); // Return 429 Too Many Requests if rate limit exceeded
     }
 
     // Validate required fields
@@ -45,7 +46,7 @@ export class ChatController {
         .status(400)
         .send(
           "Missing required fields: name, email, and messages are required."
-        );
+        ); // Return 400 Bad Request if any required fields are missing
     }
 
     // Validate email format
@@ -55,7 +56,7 @@ export class ChatController {
         .status(400)
         .send(
           "Invalid email format. Please provide a valid email address (e.g., user@example.com)."
-        );
+        ); // Return 400 Bad Request if email format is invalid
     }
 
     try {
@@ -74,11 +75,9 @@ export class ChatController {
         console.log(
           "New user condition met, calling sendLeadNotificationEmail..."
         );
-        const emailService = new EmailService(db);
-        await emailService.sendLeadNotificationEmail(name, email);
-
-        // Save the lead to Firestore - THIS IS THE MISSING LINE
-        await leadModel.saveLead(name, email);
+        const emailService = new EmailService(db); // Create an instance of EmailService, passing the db for future use
+        await emailService.sendLeadNotificationEmail(name, email); // Send an email notification about the new lead
+        await leadModel.saveLead(name, email); // Save the new lead to the database
         console.log(`New lead saved for ${name} (${email})`);
       } else {
         console.log("New user condition NOT met:", {
@@ -89,11 +88,11 @@ export class ChatController {
       }
 
       // Get response from OpenAI
-      const reply = await OpenAIService.getChatResponse(messages, name, email);
-      res.json({ reply });
+      const reply = await OpenAIService.getChatResponse(messages, name, email); // Get a response from OpenAI based on the chat messages
+      res.json({ reply }); // Send the response back to the client
     } catch (error) {
       console.error(`Error in chat controller: ${error.message}`);
-      res.status(500).send(error.message);
+      res.status(500).send(error.message); // Handle any errors that occur during the chat processing
     }
   }
 
@@ -104,15 +103,15 @@ export class ChatController {
       const querySnapshot = await db
         .collection("leads")
         .orderBy("timestamp", "desc")
-        .get();
+        .get(); // Fetch leads from Firestore, ordered by timestamp
       const leads = [];
       querySnapshot.forEach((doc) => {
-        leads.push({ id: doc.id, ...doc.data() });
+        leads.push({ id: doc.id, ...doc.data() }); // Push each lead document into the leads array
       });
-      res.status(200).json(leads);
+      res.status(200).json(leads); // Send the leads back to the client
     } catch (error) {
       console.error(`Error fetching leads: ${error.message}`);
-      res.status(500).send("Error fetching leads from Firestore.");
+      res.status(500).send("Error fetching leads from Firestore."); // Handle any errors that occur during fetching leads
     }
   }
 }
