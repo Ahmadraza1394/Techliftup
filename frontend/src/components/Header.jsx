@@ -28,37 +28,37 @@ const Header = () => {
         <nav className="hidden md:flex space-x-8 items-center mr-4">
           <Link
             to="/"
-            className="text-gray-800 hover:text-sky-600 transition font-bold"
+            className="text-gray-800 hover:text-sky-600 transition font-bold text-lg"
           >
             Home
           </Link>
           <Link
             to="/services"
-            className="text-gray-800 hover:text-sky-600 transition font-bold"
+            className="text-gray-800 hover:text-sky-600 transition font-bold text-lg"
           >
             Services
           </Link>
           <Link
             to="/cases"
-            className="text-gray-800 hover:text-sky-600 transition font-bold"
+            className="text-gray-800 hover:text-sky-600 transition font-bold text-lg"
           >
             Case Studies
           </Link>
           <Link
             to="/team"
-            className="text-gray-800 hover:text-sky-600 transition font-bold"
+            className="text-gray-800 hover:text-sky-600 transition font-bold text-lg"
           >
             Our Team
           </Link>
           <Link
             to="/about"
-            className="text-gray-800 hover:text-sky-600 transition font-bold"
+            className="text-gray-800 hover:text-sky-600 transition font-bold text-lg"
           >
             About Us
           </Link>
           <Link
             to="/#contact"
-            className="bg-red-600 text-white  px-4 py-2 rounded-md hover:bg-red-700 transition font-bold"
+            className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition font-bold text-lg"
           >
             Contact Us
           </Link>
@@ -85,42 +85,42 @@ const Header = () => {
           <nav className="flex flex-col items-center space-y-4 py-4">
             <Link
               to="/"
-              className="text-gray-800 hover:text-sky-600 transition font-bold"
+              className="text-gray-800 hover:text-sky-600 transition font-bold text-xl"
               onClick={toggleMenu}
             >
               Home
             </Link>
             <Link
               to="/services"
-              className="text-gray-800 hover:text-sky-600 transition font-bold"
+              className="text-gray-800 hover:text-sky-600 transition font-bold text-xl"
               onClick={toggleMenu}
             >
               Services
             </Link>
             <Link
               to="/cases"
-              className="text-gray-800 hover:text-sky-600 transition font-bold"
+              className="text-gray-800 hover:text-sky-600 transition font-bold text-xl"
               onClick={toggleMenu}
             >
               Case Studies
             </Link>
             <Link
               to="/team"
-              className="text-gray-800 hover:text-sky-600 transition font-bold"
+              className="text-gray-800 hover:text-sky-600 transition font-bold text-xl"
               onClick={toggleMenu}
             >
               Our Team
             </Link>
             <Link
               to="/about"
-              className="text-gray-800 hover:text-sky-600 transition font-bold"
+              className="text-gray-800 hover:text-sky-600 transition font-bold text-xl"
               onClick={toggleMenu}
             >
               About Us
             </Link>
             <Link
               to="/#contact"
-              className="bg-red-600 text-white  px-4 py-2 rounded-md hover:bg-red-700 transition font-bold"
+              className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition font-bold text-xl"
               onClick={toggleMenu}
             >
               Contact Us

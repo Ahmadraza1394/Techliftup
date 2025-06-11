@@ -46,6 +46,42 @@ const cases = [
       " Viste Ai Asistant Website that automate guest message and Automate Check-ins, Check-outs &",
     link: "/cases/visteai", // Corrected route to individual case
   },
+  {
+    id: 5,
+    title: "Sonneto AI ",
+    description: "Sonneto AI is a Music Streaming Platform that uses AI to provide personalized music recommendations to users.",
+    image: "/assets/images/sonnetoai.png", // Add your image path here
+    details:
+      "Sonneto AI is a Music Streaming Platform that uses AI to provide personalized music recommendations to users.",
+    link: "/cases/sonnetoai", // Corrected route to individual case
+  },
+  {
+    id: 6,
+    title: "Electro Santos ",
+    description: "Electro Santos Provides Electric Products and services ",
+    image: "/assets/images/electrosanto.png", // Add your image path here
+    details:
+      "Electro Santos Provides Electric Products and services",
+    link: "/cases/electrosanto", // Corrected route to individual case
+  },
+  {
+    id: 7,
+    title: "Passion Farm ",
+    description: "Passion Form is Ecommerce Store that sell organic products to customers ",
+    image: "/assets/images/passionfarm.png", // Add your image path here
+    details:
+      "Passion Form is ecommerce Store that sell organic products to customers",
+    link: "/cases/passionfarm", // Corrected route to individual case
+  },
+  {
+    id: 7,
+    title: "Clean Water ",
+    description: "Clean Water provides Water Treatment and purification services   ",
+    image: "/assets/images/cleanwater.png", // Add your image path here
+    details:
+      "Clean Water provides Water Treatment and purification services",
+    link: "/cases/cleanwater", // Corrected route to individual case
+  },
 ];
 
 const Cases = () => {
@@ -95,46 +131,52 @@ const Cases = () => {
         <hr className="bg-gray-50 text-gray-50" />
       </section>
 
-      <section className="py-14 px-8 bg-gray-50 text-gray-800">
+      <section className="py-16 px-4 md:px-8 bg-gradient-to-b from-gray-50 to-gray-100 text-gray-800">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold mb-4">Cases</h1>
-          <p className="text-lg max-w-3xl mx-auto leading-relaxed">
-            Explore our successful projects showcasing our expertise in
-            delivering exceptional solutions.
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent  bg-sky-500">Our Success Stories</h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-700">
+            Discover how we've helped businesses transform their digital presence and achieve remarkable growth.
           </p>
         </motion.div>
 
         {/* Cases Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {cases.map((caseItem) => (
             <motion.div
               key={caseItem.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: caseItem.id * 0.1 }}
-              className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-3xl hover:scale-105 transition-transform duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: caseItem.id * 0.1 }}
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl group transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
             >
-              <img
-                src={caseItem.image}
-                alt={caseItem.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h2 className="text-2xl font-bold text-gray-900">
+              <div className="relative overflow-hidden">
+                <img
+                  src={caseItem.image}
+                  alt={caseItem.title}
+                  className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">
                   {caseItem.title}
                 </h2>
-                <p className="text-gray-600 mt-2">{caseItem.description}</p>
+                <p className="text-gray-600 mb-4 line-clamp-2 flex-grow">{caseItem.description}</p>
                 <Link
                   to={caseItem.link}
-                  className="mt-4 inline-block text-sky-500 hover:underline font-medium"
+                  className="inline-flex items-center px-4 py-2 bg-sky-500 text-white font-medium rounded-md hover:bg-sky-600 transition-colors duration-300 mt-auto"
                 >
-                  Read More →
+                  View Case Study
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
                 </Link>
               </div>
             </motion.div>

@@ -47,120 +47,98 @@ const TechnologiesSection = () => {
       {
         name: "React",
         icon: <FaReact className="text-sky-700 text-4xl" />,
-        app: "Used for dynamic web applications like Facebook & Airbnb.",
       },
       {
         name: "Angular",
         icon: <FaAngular className="text-red-600 text-4xl" />,
-        app: "Great for enterprise applications like Gmail.",
       },
       {
         name: "Vue",
         icon: <FaVuejs className="text-green-600 text-4xl" />,
-        app: "Lightweight & powerful, used in Alibaba & Behance.",
       },
       {
         name: "jQuery",
         icon: <SiJquery className="text-blue-400 text-4xl" />,
-        app: "Simplifies JavaScript for interactive web elements.",
       },
       {
         name: "TypeScript",
         icon: <SiTypescript className="text-blue-600 text-4xl" />,
-        app: "Ensures error-free coding in large projects.",
       },
     ],
     Mobile: [
       {
         name: "iOS",
         icon: <FaApple className="text-gray-800 text-4xl" />,
-        app: "Native iPhone app development for seamless performance.",
       },
       {
         name: "Android",
         icon: <FaAndroid className="text-green-600 text-4xl" />,
-        app: "Powering apps like WhatsApp and Uber.",
       },
       {
         name: "Kotlin",
         icon: <SiKotlin className="text teal-600 text-4xl" />,
-        app: "Google’s preferred language for Android apps.",
       },
       {
         name: "Flutter",
         icon: <SiFlutter className="text-blue-400 text-4xl" />,
-        app: "One codebase for iOS & Android, used in Google Pay.",
       },
       {
         name: "Java",
         icon: <FaJava className="text-red-600 text-4xl" />,
-        app: "Backend of leading mobile apps like Twitter & Spotify.",
       },
     ],
     Backend: [
       {
         name: "Node.js",
         icon: <FaNodeJs className="text-green-600 text-4xl" />,
-        app: "Used in Netflix & LinkedIn for fast performance.",
       },
       {
         name: "PHP / Laravel",
         icon: <SiPhp className="text-purple-600 text-4xl" />,
-        app: "Powers 78% of websites including Facebook.",
       },
       {
         name: "Python / Django",
         icon: <SiPython className="text-yellow-400 text-4xl" />,
-        app: "Runs Instagram & YouTube’s backend.",
       },
       {
         name: "Java",
         icon: <FaJava className="text-red-600 text-4xl" />,
-        app: "Supports enterprise software like banking applications.",
       },
     ],
     Database: [
       {
         name: "MySQL / PostgreSQL",
         icon: <SiMysql className="text-blue-600 text-4xl" />,
-        app: "Manages data for Uber & Netflix.",
       },
       {
         name: "MongoDB",
         icon: <SiMongodb className="text-green-600 text-4xl" />,
-        app: "NoSQL database used in e-commerce platforms.",
       },
       {
         name: "Tableau",
         icon: <SiTableau className="text-blue-600 text-4xl" />,
-        app: "Transforms raw data into actionable insights.",
       },
     ],
     "Building Services": [
       {
         name: "BIM",
         icon: <SiAutodesk className="text-red-600 text-4xl" />,
-        app: "3D modeling for efficient building design.",
       },
       {
         name: "AutoCAD",
         icon: <SiAutodesk className="text-red-600 text-4xl" />,
-        app: "Industry standard for architectural design.",
       },
       {
         name: "Mechanical Systems",
         icon: <FaCogs className="text-gray-600 text-4xl" />,
-        app: "Used in HVAC system planning.",
       },
       {
         name: "Electrical Design",
         icon: <FaBolt className="text-yellow-500 text-4xl" />,
-        app: "Designs power distribution in smart buildings.",
       },
       {
         name: "Plumbing Systems",
         icon: <FaWater className="text-blue-600 text-4xl" />,
-        app: "Essential for water supply planning.",
       },
     ],
   };
@@ -224,7 +202,6 @@ const TechnologiesSection = () => {
               <span className="text-base sm:text-lg font-medium text-gray-500 hover:text-red-500 transition-colors duration-300">
                 {tech.name}
               </span>
-              <p className="text-sm text-gray-400">{tech.app}</p>
             </motion.div>
           ))}
         </motion.div>

@@ -33,7 +33,7 @@ const About = () => {
           </Link>
         </div>
         {/* Digital Services Section */}
-        <section className="bg-[#21B6DE] py-10 mt-16 my-10 px-6 rounded-xl">
+        <section className="bg-sky-500 py-10 mt-16 my-10 px-6 rounded-xl">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
             {/* Right Side - Mission & Vision */}
             <div className="text-center md:text-left">

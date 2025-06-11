@@ -22,6 +22,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 import WhatsappButton from "./components/WhatsappButton";
+import CallToAction from "./components/CallToAction";
 
 // const approaches = [
 //   {
@@ -83,9 +84,9 @@ const approaches = [
 ];
 const services = [
   {
-    icon: <FaDesktop />,
-    title: "Website Design",
-    desc: "Modern, responsive, and user-friendly website designs.",
+    icon: <FaTools />,
+    title: "AI Automation & AI Chatbot",
+    desc: "Ensure your business runs smoothly with AI automation and chatbots.",
   },
   {
     icon: <FaCode />,
@@ -93,9 +94,9 @@ const services = [
     desc: "Robust and scalable web development solutions.",
   },
   {
-    icon: <FaTools />,
-    title: "Website Management & Maintenance",
-    desc: "Ensuring your website remains updated and secure.",
+    icon: <FaDesktop />,
+    title: "Website Design ",
+    desc: "Modern, responsive, and user-friendly website designs.",
   },
   {
     icon: <FaBuffer />,
@@ -220,7 +221,7 @@ export default function Services() {
       </section>
       {/* Our Services */}
       <section className="min-h-screen bg-gray-100 py-16 px-6 md:px-12 lg:px-16">
-        <h2 className="text-center text-4xl font-bold mb-12 text-gray-900">
+        <h2 className="text-center text-4xl font-bold mb-12 text-sky-500">
           Our Services
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -231,7 +232,7 @@ export default function Services() {
               animate={{ opacity: 1, y: 0 }}
               whileHover={{ scale: 1.05 }} // Added hover animation
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="bg-[#21B6DE] rounded-3xl p-5 shadow flex flex-col items-start"
+              className="bg-sky-500 rounded-3xl p-5 shadow flex flex-col items-start"
             >
               <div className="text-red-500 bg-gray-100 rounded-2xl p-3 text-5xl mb-6">
                 {service.icon}
@@ -246,13 +247,13 @@ export default function Services() {
       </section>
       {/* Our Approach */}
       <section className="bg-gray-100 px-2 pt-10 relative">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold flex items-center justify-center my-4 mb-10 text-gray-800">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold flex items-center justify-center my-4 mb-10 text-sky-500">
           Our Approach
         </h2>
-        <div className="bg-[#21B6DE] text-white p-2 sm:p-8 py-12 sm:py-12 rounded-2xl max-w-6xl mx-auto relative overflow-hidden">
+        <div className="bg-sky-500 text-white p-2 sm:p-8 py-12 sm:py-12 rounded-2xl max-w-6xl mx-auto relative overflow-hidden">
           {/* Decorative Background Elements */}
           <div className="absolute top-0 left-0 w-24 h-24 bg-red-500 rounded-br-md"></div>
-          <div className="absolute bottom-0 right-0 w-52 h-24 bg-cyan-500 rounded-tl-lg"></div>
+          <div className="absolute bottom-0 right-0 w-52 h-24 bg-cyan-800 rounded-tl-lg"></div>
 
           {/* Tabs */}
           <div className="flex flex-wrap justify-center space-x-2 sm:space-x-4 relative z-10">
@@ -312,7 +313,7 @@ export default function Services() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 py-24">
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold text-center text-gray-900 mb-8">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold text-center text-sky-500 mb-8">
           What Sets Us Apart
         </h2>
 
@@ -378,22 +379,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="bg-[#21B6DE] rounded-3xl max-w-6xl mx-auto px-6 py-16 my-6 mb-10 text-center text-white">
-        <h2 className="text-4xl md:text-5xl font-bold">
-          Let’s Elevate Your Brand Together
-        </h2>
-        <p className="text-2xl mt-2">Connect with our experts now!</p>
-
-        <div className="mt-6">
-          <a
-            href="/#contact"
-            className="inline-flex items-center px-6 py-3 bg-white text-black text-lg font-medium rounded-full shadow-md hover:bg-gray-200 transition"
-          >
-            Free consultation
-            <span className="ml-2">➝</span>
-          </a>
-        </div>
-      </section>
+      <CallToAction />
       <WhatsappButton />
 
       <Footer />

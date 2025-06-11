@@ -1,88 +1,83 @@
 const OurProcess = () => {
   return (
-    <div className="bg-gray-100 p-4 sm:p-6 md:p-12">
-      <div className="max-w-5xl mx-auto">
-        {/* Meet TechLiftUp Section */}
-        <div className="flex items-center space-x-3 sm:space-x-4">
-          {/* <span className="text-3xl sm:text-4xl">👋</span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
-            Meet TechLiftUp
-          </h2> */}
+    <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-4 sm:p-6 md:p-12 text-white">
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-red-500 mix-blend-multiply filter blur-xl opacity-70"></div>
+          <div className="absolute bottom-40 right-20 w-32 h-32 rounded-full bg-sky-500 mix-blend-multiply filter blur-xl opacity-70"></div>
+          <div className="absolute top-40 right-40 w-16 h-16 rounded-full bg-purple-500 mix-blend-multiply filter blur-xl opacity-70"></div>
         </div>
-
+        
         {/* Our Process Section */}
-        <div className="bg-[#21B6DE] rounded-xl p-6 sm:p-8 md:p-20 mt-6 sm:mt-8 shadow-md h-auto">
-          <h3 className="text-2xl sm:text-3xl md:text-6xl font-bold pb-6 text-white">
-            Our Process
+        <div className="backdrop-blur-sm bg-white/10 rounded-2xl p-8 md:p-16 mt-6 shadow-xl border border-white/20">
+          <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold pb-6 text-white drop-shadow-lg">
+            Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-600">Process</span>
           </h3>
-          {/* <p className="text-base sm:text-lg md:text-4xl text-white/90 mt-3 max-w-3xl">
-            At TechSolutions, we help businesses transform through innovative
-            web, app, and AI solutions.
-          </p> */}
-          <ul className="mt-6 sm:mt-8 space-y-4 sm:space-y-5 md:space-y-6">
-            <li className="flex items-start">
-              <span className="bg-white text-[#21B6DE] rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center text-2xl sm:text-3xl font-bold flex-shrink-0 mt-3 sm:mt-1 shadow-md mr-4">
+          
+          <ul className="mt-10 space-y-8 md:space-y-12">
+            <li className="flex items-start transform transition-all duration-300 hover:translate-x-2">
+              <span className="bg-gradient-to-br from-red-400 to-red-600 text-white rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-2xl sm:text-3xl font-bold flex-shrink-0 shadow-lg mr-6">
                 1
               </span>
-              <p className="text-lg sm:text-xl md:text-3xl  text-white/90 pt-1">
-                We design comprehensive data-driven strategies that align
-                perfectly with your business objectives and evolving market
-                needs.
-              </p>
+              <div>
+                <h4 className="text-xl md:text-2xl font-bold text-red-400 mb-2">Strategic Planning</h4>
+                <p className="text-lg sm:text-xl md:text-2xl text-white/90">
+                  We design comprehensive data-driven strategies that align perfectly with your business objectives and evolving market needs.
+                </p>
+              </div>
             </li>
-            <li className="flex items-start">
-              <span className="bg-white text-[#21B6DE] rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center text-2xl sm:text-3xl font-bold flex-shrink-0 mt-1 sm:mt-1 shadow-md mr-4">
+            
+            <li className="flex items-start transform transition-all duration-300 hover:translate-x-2">
+              <span className="bg-gradient-to-br from-red-400 to-red-600 text-white rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-2xl sm:text-3xl font-bold flex-shrink-0 shadow-lg mr-6">
                 2
               </span>
-              <p className="text-lg sm:text-xl md:text-3xl text-white/90 pt-1">
-                We develop tailored web solutions, innovative mobile apps, and
-                advanced AI integrations that effectively solve real business
-                challenges.
-              </p>
+              <div>
+                <h4 className="text-xl md:text-2xl font-bold text-red-400 mb-2">Solution Development</h4>
+                <p className="text-lg sm:text-xl md:text-2xl text-white/90">
+                  We develop tailored web solutions, innovative mobile apps, and advanced AI integrations that effectively solve real business challenges.
+                </p>
+              </div>
             </li>
-            <li className="flex items-start">
-              <span className="bg-white text-[#21B6DE] rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center text-2xl sm:text-3xl font-bold flex-shrink-0 mt-1 sm:mt-1 shadow-md mr-4">
+            
+            <li className="flex items-start transform transition-all duration-300 hover:translate-x-2">
+              <span className="bg-gradient-to-br from-red-400 to-red-600 text-white rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-2xl sm:text-3xl font-bold flex-shrink-0 shadow-lg mr-6">
                 3
               </span>
-              <p className="text-lg sm:text-xl md:text-3xl text-white/90 pt-1">
-                We implement robust analytics systems that provide actionable
-                insights and foster continuous improvement for your business.
-              </p>
+              <div>
+                <h4 className="text-xl md:text-2xl font-bold text-red-400 mb-2">Analytics & Optimization</h4>
+                <p className="text-lg sm:text-xl md:text-2xl text-white/90">
+                  We implement robust analytics systems that provide actionable insights and foster continuous improvement for your business.
+                </p>
+              </div>
             </li>
           </ul>
-          <p className="mt-10 sm:mt-8 text-lg sm:text-xl md:text-3xl  font-semibold text-gray-800 bg-gray-50 p-4 rounded-lg inline-block">
-            This is how we empower businesses to stand out and thrive in the
-            digital world.
-          </p>
+          
+          <div className="mt-12 text-center">
+            <p className="inline-block bg-gradient-to-r from-red-400 to-red-600 text-white px-8 py-4 rounded-lg text-xl sm:text-2xl font-bold shadow-lg transform transition-transform hover:scale-105">
+              This is how we empower businesses to stand out and thrive in the digital world.
+            </p>
+          </div>
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-4 sm:mt-6">
-          <div className="bg-[#21B6DE] text-white rounded-lg p-4 sm:p-6 text-center h-auto">
-            <h4 className="text-3xl sm:text-4xl md:text-5xl text-justify lg:text-5xl font-extrabold font-mono">
-              Our Work
-            </h4>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-mono text-left  mt-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10">
+          <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-xl p-8 text-left transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <h4 className="text-3xl sm:text-4xl font-bold text-red-400 mb-4">Our Work</h4>
+            <p className="text-xl sm:text-2xl text-white">
               Transforming businesses with innovative solutions
             </p>
           </div>
-          <div className="bg-[#21B6DE] text-white rounded-lg p-4 sm:p-6 text-center h-auto">
-            <h4 className="text-3xl text-justify sm:text-4xl md:text-5xl lg:text-5xl font-extrabold font-mono">
-              Our Team
-            </h4>
-            <p className="mt-2 text-left text-lg sm:text-xl md:text-2xl lg:text-3xl font-mono">
-              A diverse team of professionals prepared to bring your vision to
-              life.
+          
+          <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-xl p-8 text-left transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <h4 className="text-3xl sm:text-4xl font-bold text-red-400 mb-4">Our Team</h4>
+            <p className="text-xl sm:text-2xl text-white">
+              A diverse team of professionals prepared to bring your vision to life.
             </p>
           </div>
-          <div className="bg-[#21B6DE] text-white rounded-lg p-4 sm:p-6 text-center h-auto sm:col-span-2 md:col-span-1">
-            <h4
-              style={{ fontSize: "2.5rem" }}
-              className="text-3xl text-justify sm:text-4xl md:text-3xl lg:text-4xl font-extrabold font-mono"
-            >
-              Our Approach
-            </h4>
-            <p className="mt-5 text-left text-lg sm:text-xl md:text-2xl lg:text-3xl font-mono">
+          
+          <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-xl p-8 text-left transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl sm:col-span-2 md:col-span-1">
+            <h4 className="text-3xl sm:text-4xl font-bold text-red-400 mb-4">Our Approach</h4>
+            <p className="text-xl sm:text-2xl text-white">
               Data-driven solutions for real results
             </p>
           </div>
