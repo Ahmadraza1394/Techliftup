@@ -56,10 +56,10 @@ const Team = () => {
               <p className="text-gray-500 text-lg">
                 Building Services Engineering Design Consultant
               </p>
-              <p className="mt-2 text-gray-600 text-lg">
+              {/* <p className="mt-2 text-gray-600 text-lg">
                 Expert in MEP systems design with extensive experience in
                 sustainable building solutions and energy optimization.
-              </p>
+              </p> */}
             </div>
 
             {/* <!-- Team Member 2 --> */}
@@ -77,10 +77,10 @@ const Team = () => {
               <p className="text-gray-500 text-lg">
                 CEO & Full Stack Developer
               </p>
-              <p className="mt-2 text-gray-600 text-lg">
+              {/* <p className="mt-2 text-gray-600 text-lg">
                 Passionate developer crafting innovative solutions with
                 expertise in both frontend and backend technologies.
-              </p>
+              </p> */}
             </div>
 
             {/* <!-- Team Member 3 --> */}
@@ -90,16 +90,16 @@ const Team = () => {
                   src="/assets/images/qadeer.png"
                   alt="Qadeer Ahmad"
                   className="w-full h-full object-cover object-top shadow-dark shadow-md"
-                />
+                />  
               </div>
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Qadeer Ahmad
               </h3>
               <p className="text-gray-500 text-lg">Co Founder & IT Head</p>
-              <p className="mt-2 text-gray-600 text-lg">
+              {/* <p className="mt-2 text-gray-600 text-lg">
                 Technology strategist driving digital transformation with
                 cutting-edge IT solutions and infrastructure.
-              </p>
+              </p> */}
             </div>
 
             {/* <!-- Team Member 4 --> */}
@@ -117,10 +117,10 @@ const Team = () => {
               <p className="text-gray-500 text-lg">
                 Business Development Manager
               </p>
-              <p className="mt-2 text-gray-600 text-lg">
+              {/* <p className="mt-2 text-gray-600 text-lg">
                 Strategic business leader focused on expanding market reach and
                 fostering valuable client relationships.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

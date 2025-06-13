@@ -57,7 +57,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="inline-flex items-center bg-sky-50/10 backdrop-blur-sm rounded-full px-6 py-2 mb-4 border border-sky-50/20 shadow-lg shadow-sky-500/20"
           >
-            <span className="text-sky-50 font-medium">Transforming Ideas into Digital Reality</span>
+            <span className="text-sky-50 font-medium">Digital Marketing Agency That Drives Revenue</span>
           </motion.div>
           
           <motion.h1
@@ -66,9 +66,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight"
           >
-            Elevate Your Business with{" "}
+            Unlock Revenue Growth with{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-200 ">
-              Smart Solutions
+              Digital Marketing
             </span>
           </motion.h1>
 

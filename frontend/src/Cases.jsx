@@ -30,12 +30,12 @@ const cases = [
   },
   {
     id: 3,
-    title: "Brand Wave Digital",
-    description: "Digital Marketing Agency",
-    image: "/assets/images/brandwavedigital.png", // Add your image path here
+    title: "Tuatara Tourist",
+    description: "Tour operator website for Tuatara Tourist.",
+    image: "/assets/images/tuataraTourist.png", // Add your image path here
     details:
-      "Brand Wave Digital is a digital marketing agency that helps businesses grow.",
-    link: "/cases/brand-wave-digital", // Corrected route to individual case
+      "Tuatara Tourist is a tourist website that offers tours and activities in Tuatara.",
+    link: "/cases/tuatara-tourist", // Corrected route to individual case
   },
   {
     id: 4,
@@ -57,12 +57,12 @@ const cases = [
   },
   {
     id: 6,
-    title: "Electro Santos ",
-    description: "Electro Santos Provides Electric Products and services ",
-    image: "/assets/images/electrosanto.png", // Add your image path here
+    title: "Inter City ",
+    description: "Inter City Provides Bus Booking Services ",
+    image: "/assets/images/interCity.png", // Add your image path here
     details:
-      "Electro Santos Provides Electric Products and services",
-    link: "/cases/electrosanto", // Corrected route to individual case
+      "Inter City Provides Bus Booking Services",
+    link: "/cases/intercity", // Corrected route to individual case
   },
   {
     id: 7,
@@ -74,13 +74,30 @@ const cases = [
     link: "/cases/passionfarm", // Corrected route to individual case
   },
   {
-    id: 7,
+    id: 8,
     title: "Clean Water ",
     description: "Clean Water provides Water Treatment and purification services   ",
     image: "/assets/images/cleanwater.png", // Add your image path here
     details:
       "Clean Water provides Water Treatment and purification services",
     link: "/cases/cleanwater", // Corrected route to individual case
+  }, {
+    id: 9,
+    title: "Brand Wave Digital",
+    description: "Digital Marketing Agency",
+    image: "/assets/images/brandwavedigital.png", // Add your image path here
+    details:
+      "Brand Wave Digital is a digital marketing agency that helps businesses grow.",
+    link: "/cases/brand-wave-digital", // Corrected route to individual case
+  },
+  {
+    id: 10,
+    title: "Electro Santos ",
+    description: "Electro Santos Provides Electric Products and services ",
+    image: "/assets/images/electrosanto.png", // Add your image path here
+    details:
+      "Electro Santos Provides Electric Products and services",
+    link: "/cases/electrosanto", // Corrected route to individual case
   },
 ];
 
