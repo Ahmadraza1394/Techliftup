@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { T } from "../context/LanguageContext";
 
 const testimonials = [
   {
@@ -60,10 +61,10 @@ const TestimonialsSection = () => {
       {/* Text Section */}
       <div className="flex-1 max-w-xl">
         <h3 className="text-red-500 text-xl font-semibold mb-2">
-          Testimonials
+          <T>Testimonials</T>
         </h3>
         <h2 className="text-4xl font-bold mb-6 text-sky-500">
-          We help to achieve mutual goals.
+          <T>We help to achieve mutual goals.</T>
         </h2>
 
         <AnimatePresence mode="wait">
@@ -82,18 +83,18 @@ const TestimonialsSection = () => {
               />
               <div>
                 <p className="bg-gray-200 text-gray-700 text-sm px-2 py-1 rounded-md inline-block mb-1">
-                  {testimonials[currentIndex].position}
+                  <T>{testimonials[currentIndex].position}</T>
                 </p>
                 <p className="text-lg font-semibold">
                   {testimonials[currentIndex].name}
                 </p>
                 <p className="text-gray-500">
-                  {testimonials[currentIndex].title}
+                  <T>{testimonials[currentIndex].title}</T>
                 </p>
               </div>
             </div>
             <p className="text-gray-700 leading-relaxed text-xl text-justify">
-              {testimonials[currentIndex].text}
+              <T>{testimonials[currentIndex].text}</T>
             </p>
           </motion.div>
         </AnimatePresence>

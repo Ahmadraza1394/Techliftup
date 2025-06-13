@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import CallToAction from "./components/CallToAction";
 
 import WhatsappButton from "./components/WhatsappButton";
+import { T } from "./context/LanguageContext";
 
 const caseData = {
   "cabo-shark-dive": {
@@ -125,6 +126,255 @@ const caseData = {
       "By combining AI-driven insights with strategic marketing, Visteai empowers businesses to attract high-quality leads, optimize ad budgets, and scale efficiently in competitive markets.",
     website: "https://visteai.netlify.app/",
   },
+  "tuatara-tourist": {
+    title: "Tuatara Tourist",
+    image: "/assets/images/tuataraTourist.png",
+    overview: "Tuatara Tourist offers comprehensive tours and activities in Tuatara, providing visitors with authentic local experiences and adventures.",
+    objectives: [
+      "Create an intuitive platform for visitors to discover and book local tours",
+      "Showcase the unique natural attractions and cultural experiences of Tuatara",
+      "Implement easy-to-use booking functionality for various tour packages",
+      "Optimize the site for international tourists with multilingual support"
+    ],
+    challenges: [
+      "Presenting diverse tour options in an organized, user-friendly manner",
+      "Creating compelling content that accurately represents the local experience",
+      "Ensuring mobile responsiveness for travelers on the go"
+    ],
+    solutions: [
+      "Developed a category-based tour exploration system",
+      "Integrated high-quality imagery and detailed tour descriptions",
+      "Implemented a streamlined booking process with instant confirmation",
+      "Created a responsive design optimized for all devices"
+    ],
+    results: [
+      "Increased online bookings by 45% within the first quarter",
+      "Improved user engagement with average session duration up by 3 minutes",
+      "Enhanced visibility in search results for relevant tourism keywords",
+      "Positive customer feedback highlighting ease of use and information clarity"
+    ],
+    conclusion: "The Tuatara Tourist website successfully bridges the gap between travelers and local experiences, providing an effective platform that benefits both tourists and local tour operators.",
+    website: "https://tuataratours.co.nz/"
+  },
+  "sonnetoai": {
+    title: "Sonneto AI",
+    image: "/assets/images/sonnetoai.png",
+    overview: "Sonneto AI is an innovative music streaming platform that leverages artificial intelligence to deliver personalized music recommendations based on user preferences, listening habits, and emotional states.",
+    objectives: [
+      "Develop an intelligent recommendation system that evolves with user listening patterns",
+      "Create an intuitive interface for discovering new music across genres",
+      "Implement mood-based playlists that adapt to different contexts",
+      "Build a platform that supports independent artists alongside mainstream music"
+    ],
+    challenges: [
+      "Processing and analyzing large volumes of listening data efficiently",
+      "Creating algorithms that accurately predict musical preferences",
+      "Balancing familiar recommendations with discovery of new artists",
+      "Ensuring seamless streaming experience across various network conditions"
+    ],
+    approach: [
+      "Implemented machine learning algorithms that adapt to user feedback and behavior",
+      "Designed a clean, responsive interface focused on music discovery",
+      "Developed advanced audio fingerprinting for precise recommendations",
+      "Created collaborative filtering systems that connect users with similar tastes"
+    ],
+    results: [
+      "User retention rate 30% higher than industry average",
+      "Average listening time increased by 45 minutes per session",
+      "Successfully predicted user preferences with 87% accuracy",
+      "Featured in tech publications for innovation in AI music recommendations"
+    ],
+    conclusion: "Sonneto AI has successfully transformed how users discover and enjoy music through its intelligent recommendation system, creating a personalized experience that keeps listeners engaged and delighted.",
+    website: "https://sonnetoai.netlify.app/"
+  },
+  "intercity": {
+    title: "Inter City",
+    image: "/assets/images/interCity.png",
+    overview: "Inter City provides comprehensive bus booking services connecting major cities and rural areas, offering travelers a convenient and affordable transportation solution.",
+    objectives: [
+      "Streamline the online booking process for intercity bus travel",
+      "Implement real-time seat availability and route information",
+      "Create a user-friendly mobile experience for on-the-go bookings",
+      "Develop a secure payment system with multiple options"
+    ],
+    challenges: [
+      "Integrating with multiple bus operators' scheduling systems",
+      "Handling peak booking periods without performance degradation",
+      "Providing accurate ETAs considering variable traffic conditions",
+      "Supporting bookings in areas with limited internet connectivity"
+    ],
+    approach: [
+      "Built a centralized booking platform connected to major bus operators",
+      "Implemented a responsive design prioritizing mobile users",
+      "Developed an offline booking capability for areas with poor connectivity",
+      "Created an intuitive seat selection interface with visual representation"
+    ],
+    results: [
+      "Reduced booking time by 65% compared to traditional methods",
+      "Increased online bookings by 120% within six months",
+      "Achieved 99.7% uptime even during peak holiday seasons",
+      "Expanded service coverage to 85% of national bus routes"
+    ],
+    conclusion: "Inter City has revolutionized bus travel booking by providing a reliable, user-friendly platform that connects travelers to their destinations efficiently while offering bus operators a valuable digital sales channel.",
+    website: "https://www.intercity.co.nz/"
+  },
+  "passionfarm": {
+    title: "Passion Farm",
+    image: "/assets/images/passionfarm.png",
+    overview: "Passion Farm is an ecommerce platform specializing in organic and sustainably grown products, connecting health-conscious consumers directly with ethical farmers and producers.",
+    objectives: [
+      "Create a visually appealing showcase for organic products",
+      "Implement a secure and efficient ordering system",
+      "Educate consumers about sustainable farming practices",
+      "Build trust through transparency in sourcing and production"
+    ],
+    challenges: [
+      "Managing inventory for seasonal and perishable products",
+      "Ensuring product freshness through efficient logistics",
+      "Communicating the value proposition of premium organic products",
+      "Balancing aesthetics with fast page loading times"
+    ],
+    solutions: [
+      "Developed a dynamic inventory management system for seasonal products",
+      "Implemented farm-to-table tracking for complete transparency",
+      "Created educational content about organic farming practices",
+      "Designed an optimized checkout process with multiple delivery options"
+    ],
+    results: [
+      "Achieved 40% growth in monthly recurring customers",
+      "Reduced cart abandonment rate by 25%",
+      "Increased average order value by 35%",
+      "Expanded product range from 50 to 200+ organic items"
+    ],
+    conclusion: "Passion Farm successfully bridges the gap between organic producers and conscious consumers, creating a sustainable marketplace that benefits farmers, customers, and the environment alike.",
+    website: "https://passionfarms.netlify.app/"
+  },
+  "cleanwater": {
+    title: "Clean Water",
+    image: "/assets/images/cleanwater.png",
+    overview: "Clean Water provides comprehensive water treatment and purification services for residential, commercial, and industrial clients, ensuring access to safe, clean water through innovative filtration technologies.",
+    objectives: [
+      "Showcase various water treatment solutions for different needs",
+      "Educate visitors about water quality issues and solutions",
+      "Generate qualified leads for consultation services",
+      "Build credibility through case studies and certifications"
+    ],
+    challenges: [
+      "Explaining complex water treatment processes in accessible terms",
+      "Differentiating services in a competitive market",
+      "Addressing diverse customer needs from residential to industrial",
+      "Converting technical information into compelling marketing content"
+    ],
+    approach: [
+      "Created interactive tools to help users identify their water issues",
+      "Developed visual explainers for complex purification processes",
+      "Implemented a streamlined quote request system with quick response time",
+      "Built a resources section with educational content about water quality"
+    ],
+    results: [
+      "Increased consultation requests by 75% year-over-year",
+      "Reduced customer acquisition cost by 30%",
+      "Expanded service area to 5 new regions",
+      "Achieved 65% conversion rate from site visits to information requests"
+    ],
+    conclusion: "Clean Water's digital presence effectively communicates their expertise in water treatment solutions, positioning them as industry leaders while educating consumers about the importance of water quality and available solutions.",
+    website: "https://cleanwaterweb.netlify.app"
+  },
+  "electrosanto": {
+    title: "Electro Santos",
+    image: "/assets/images/electrosanto.png",
+    overview: "Electro Santos provides premium electrical products and professional installation services for residential and commercial clients, focusing on energy efficiency, smart home solutions, and sustainable electrical systems.",
+    objectives: [
+      "Showcase comprehensive electrical product catalog with detailed specifications",
+      "Highlight professional installation and maintenance services",
+      "Implement easy service booking and consultation scheduling",
+      "Educate customers about energy-efficient electrical solutions"
+    ],
+    challenges: [
+      "Presenting technical products in an accessible way for non-experts",
+      "Balancing product sales with service offerings",
+      "Creating trust for high-value electrical installations",
+      "Managing seasonal demand fluctuations"
+    ],
+    solutions: [
+      "Developed categorized product displays with comparison features",
+      "Created virtual consultations for preliminary assessment",
+      "Implemented a project gallery showcasing completed installations",
+      "Built an emergency service booking system with priority scheduling"
+    ],
+    results: [
+      "Increased online product sales by 60% within first year",
+      "Grew service bookings by 45% through online scheduling",
+      "Reduced customer support calls by 30% through improved information",
+      "Expanded business to include renewable energy solutions"
+    ],
+    conclusion: "Electro Santos successfully established an online presence that balances product sales with service offerings, providing customers with comprehensive electrical solutions while building credibility through education and showcasing expertise.",
+    website: "https://electrosantos.netlify.app/"
+  },
+  "hourglass": {
+    title: "The Hour Glass",
+    image: "/assets/images/hourGlass.png",
+    overview: "The Hour Glass is a premium watch retailer offering a curated collection of luxury timepieces, providing watch enthusiasts with authentic, high-quality watches from renowned global brands.",
+    objectives: [
+      "Create an elegant online showcase for luxury watch collections",
+      "Implement secure e-commerce functionality for high-value products",
+      "Develop a virtual try-on experience for selected watch models",
+      "Build a knowledge center about watch craftsmanship and maintenance"
+    ],
+    challenges: [
+      "Presenting luxury products with appropriate digital sophistication",
+      "Ensuring security for high-value transactions",
+      "Creating detailed product visualizations for intricate timepieces",
+      "Balancing exclusivity with accessibility for new customers"
+    ],
+    solutions: [
+      "Designed a minimalist, premium interface highlighting product details",
+      "Implemented multi-layer security protocols for transactions",
+      "Created 360° product views with zoom capabilities",
+      "Developed a watch expert consultation booking system"
+    ],
+    results: [
+      "Increased online sales by 85% in the first quarter",
+      "Improved average time on site by 4.5 minutes",
+      "Reduced cart abandonment rate by 40%",
+      "Successfully expanded customer base to younger luxury consumers"
+    ],
+    conclusion: "The Hour Glass successfully translated the premium in-store experience to digital, creating an online destination that respects the craftsmanship of luxury timepieces while providing a secure and sophisticated shopping environment.",
+    website: "https://www.thehourglass.com/"
+  },
+  "clearance-management-system": {
+    title: "Clearance Management System",
+    image: "/assets/images/clearanceSystem.png",
+    overview: "The Clearance Management System is a comprehensive digital solution designed to streamline and automate the clearance process for educational institutions, replacing paper-based workflows with an efficient online system.",
+    objectives: [
+      "Digitize the entire student clearance workflow",
+      "Reduce administrative burden and processing time",
+      "Provide real-time status tracking for students and staff",
+      "Create a secure record-keeping system for completed clearances"
+    ],
+    challenges: [
+      "Integrating with existing student information systems",
+      "Managing complex approval workflows across multiple departments",
+      "Ensuring system accessibility for all stakeholders",
+      "Maintaining data security and student privacy"
+    ],
+    approach: [
+      "Developed a modular system adaptable to institution-specific workflows",
+      "Created role-based access controls for different departments",
+      "Implemented automated notifications for pending clearance items",
+      "Built comprehensive reporting tools for administration"
+    ],
+    results: [
+      "Reduced clearance processing time by 75%",
+      "Decreased administrative workload by 60%",
+      "Eliminated paper usage, saving approximately 15,000 sheets annually",
+      "Improved student satisfaction with transparent process tracking"
+    ],
+    conclusion: "The Clearance Management System has transformed an outdated, inefficient process into a streamlined digital experience, benefiting students, faculty, and administrative staff while providing better oversight and record-keeping for institutions.",
+    website: "https://clearance-management-system-fronten.vercel.app/"
+  },
+
+
 };
 const CaseDetail = () => {
   const { caseId } = useParams();
@@ -133,15 +383,15 @@ const CaseDetail = () => {
   if (!caseStudy) {
     return (
       <div className="text-center py-16">
-        <h1 className="text-6xl font-bold text-red-600">Case Not Found</h1>
+        <h1 className="text-6xl font-bold text-red-600"><T>Case Not Found</T></h1>
         <p className="text-gray-800 mt-4 text-xl">
-          Sorry, the case study you&apos;re looking for does not exist.
+          <T>Sorry, the case study you&apos;re looking for does not exist.</T>
         </p>
         <Link
           to="/"
           className="mt-4 inline-block text-sky-600 hover:underline font-medium text-xl"
         >
-          Return to Home
+          <T>Return to Home</T>
         </Link>
       </div>
     );
@@ -164,37 +414,33 @@ const CaseDetail = () => {
     <>
       <Header />
       <section className="px-8 md:px-16 py-28 bg-gray-50 text-gray-800">
-        <h1 className="text-6xl font-bold text-red-600 mb-8">{title}</h1>
+        <h1 className="text-6xl font-bold text-red-600 mb-8"><T>{title}</T></h1>
         <img
           src={image}
           alt={title}
           className="w-2/2 h-auto rounded-lg mb-10 shadow-md"
         />
         <div className="mb-10">
-          <h2 className="text-4xl font-semibold text-sky-500 mb-6">Overview</h2>
-          <p className="text-gray-800 leading-relaxed text-xl">{overview}</p>
+          <h2 className="text-4xl font-semibold text-sky-500 mb-6"><T>Overview</T></h2>
+          <p className="text-gray-800 leading-relaxed text-xl"><T>{overview}</T></p>
         </div>
         <div className="mb-10">
-          <h2 className="text-4xl font-semibold text-sky-500 mb-6">
-            Objectives
-          </h2>
+          <h2 className="text-4xl font-semibold text-sky-500 mb-6"><T>Objectives</T></h2>
           <ul className="list-disc list-inside space-y-3">
             {objectives.map((objective, index) => (
               <li key={index} className="text-xl">
-                {objective}
+                <T>{objective}</T>
               </li>
             ))}
           </ul>
         </div>
         {challenges.length > 0 && (
           <div className="mb-10">
-            <h2 className="text-4xl font-semibold text-sky-500 mb-6">
-              Challenges
-            </h2>
+            <h2 className="text-4xl font-semibold text-sky-500 mb-6"><T>Challenges</T></h2>
             <ul className="list-disc list-inside space-y-3">
               {challenges.map((challenge, index) => (
                 <li key={index} className="text-xl">
-                  {challenge}
+                  <T>{challenge}</T>
                 </li>
               ))}
             </ul>
@@ -202,13 +448,11 @@ const CaseDetail = () => {
         )}
         {approach.length > 0 && (
           <div className="mb-10">
-            <h2 className="text-4xl font-semibold text-sky-500 mb-6">
-              Approach
-            </h2>
+            <h2 className="text-4xl font-semibold text-sky-500 mb-6"><T>Approach</T></h2>
             <ul className="list-disc list-inside space-y-3">
               {approach.map((approachItem, index) => (
                 <li key={index} className="text-xl">
-                  {approachItem}
+                  <T>{approachItem}</T>
                 </li>
               ))}
             </ul>
@@ -216,46 +460,40 @@ const CaseDetail = () => {
         )}
         {solutions.length > 0 && (
           <div className="mb-10">
-            <h2 className="text-4xl font-semibold text-sky-500 mb-6">
-              Solutions
-            </h2>
+            <h2 className="text-4xl font-semibold text-sky-500 mb-6"><T>Solutions</T></h2>
             <ul className="list-disc list-inside space-y-3">
               {solutions.map((solution, index) => (
                 <li key={index} className="text-xl">
-                  {solution}
+                  <T>{solution}</T>
                 </li>
               ))}
             </ul>
           </div>
         )}
         <div className="mb-10">
-          <h2 className="text-4xl font-semibold text-sky-500 mb-6">Results</h2>
+          <h2 className="text-4xl font-semibold text-sky-500 mb-6"><T>Results</T></h2>
           <ul className="list-disc list-inside space-y-3">
             {results.map((result, index) => (
               <li key={index} className="text-xl">
-                {result}
+                <T>{result}</T>
               </li>
             ))}
           </ul>
         </div>
         <div className="mb-10">
-          <h2 className="text-4xl font-semibold text-sky-500 mb-6">
-            Conclusion
-          </h2>
-          <p className="text-xl">{conclusion}</p>
+          <h2 className="text-4xl font-semibold text-sky-500 mb-6"><T>Conclusion</T></h2>
+          <p className="text-xl"><T>{conclusion}</T></p>
         </div>
         {website && (
           <div className="mt-12 text-center">
-            <h3 className="text-3xl font-bold text-gray-700 mb-4">
-              Visit the Website
-            </h3>
+            <h3 className="text-3xl font-bold text-gray-700 mb-4"><T>Visit the Website</T></h3>
             <a
               href={website}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-sky-500 text-white rounded-md shadow-md hover:bg-sky-700 transition inline-block"
             >
-              Explore {title.split(":")[0]?.trim()}
+              <T>Explore {title.split(":")[0]?.trim()}</T>
             </a>
           </div>
         )}

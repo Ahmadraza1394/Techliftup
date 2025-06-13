@@ -25,6 +25,7 @@ import {
   SiTableau,
   SiAutodesk,
 } from "react-icons/si";
+import { T } from "../context/LanguageContext";
 
 const TechnologiesSection = () => {
   const [activeTab, setActiveTab] = useState("Frontend");
@@ -154,7 +155,7 @@ const TechnologiesSection = () => {
         transition={{ duration: 0.8 }}
         className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-sky-500"
       >
-        Technologies & Services
+        <T>Technologies & Services</T>
       </motion.h2>
 
       {/* Tabs */}
@@ -167,7 +168,7 @@ const TechnologiesSection = () => {
               activeTab === tab ? "text-sky-500" : "text-gray-500"
             } hover:text-sky-500 transition relative`}
           >
-            {tab}
+            <T>{tab}</T>
             {activeTab === tab && (
               <motion.div
                 layoutId="underline"
@@ -200,7 +201,7 @@ const TechnologiesSection = () => {
                 {tech.icon}
               </div>
               <span className="text-base sm:text-lg font-medium text-gray-500 hover:text-red-500 transition-colors duration-300">
-                {tech.name}
+                <T>{tech.name}</T>
               </span>
             </motion.div>
           ))}

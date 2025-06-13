@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { T } from "../context/LanguageContext";
 
 const faqs = [
   {
@@ -47,15 +48,13 @@ const FAQSection = () => {
       {/* Left Section */}
       <div className="md:w-1/2">
         <h3 className="text-red-500 text-xl font-semibold mb-2">
-          Frequently Asked Questions
+          <T>Frequently Asked Questions</T>
         </h3>
         <h2 className="text-5xl font-extrabold mb-8 leading-tight">
-          Why Choose <span className="text-red-500">TechLiftUp</span> for Your
-          Business
+          <T>Why Choose </T><span className="text-red-500">TechLiftUp</span><T> for Your Business</T>
         </h2>
         <p className="text-gray-700 text-lg leading-relaxed">
-          Explore some of the most common questions about our services,
-          expertise, and approach to helping businesses succeed.
+          <T>Explore some of the most common questions about our services, expertise, and approach to helping businesses succeed.</T>
         </p>
       </div>
 
@@ -73,7 +72,7 @@ const FAQSection = () => {
                 ) : (
                   <FaPlus className="text-red-500 mr-2" />
                 )}
-                {faq.question}
+                <T>{faq.question}</T>
               </span>
             </button>
             <motion.div
@@ -88,7 +87,7 @@ const FAQSection = () => {
                   transition={{ duration: 0.3 }}
                   className="mt-2 text-gray-600 leading-relaxed text-lg"
                 >
-                  {faq.answer}
+                  <T>{faq.answer}</T>
                 </motion.p>
               )}
             </motion.div>

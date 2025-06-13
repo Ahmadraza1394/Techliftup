@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { T } from "../context/LanguageContext";
 
 const logos = [
   "/assets/images/mlogo.png",
@@ -54,11 +55,11 @@ const LogoSlider = () => {
           className="mb-16 text-center"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
-            Trusted By <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-sky-500">Industry Leaders</span>
+            <T>Trusted By </T><span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-sky-500"><T>Industry Leaders</T></span>
           </h2>
           <div className="w-24 h-1 bg-red-500 mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
-            Partnering with forward-thinking companies to deliver exceptional digital solutions
+            <T>Partnering with forward-thinking companies to deliver exceptional digital solutions</T>
           </p>
         </motion.div>
       </div>

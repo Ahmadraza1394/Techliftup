@@ -6,6 +6,7 @@ import {
   // FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { T } from "../context/LanguageContext";
 
 const Footer = () => {
   return (
@@ -48,45 +49,66 @@ const Footer = () => {
 
         {/* Contact Information */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">TechLiftUp Pvt Ltd.</h3>
+          <h3 className="text-lg font-semibold mb-4">
+            <T>TechLiftUp Pvt Ltd.</T>
+          </h3>
           <div>
-            <h4 className="font-semibold">KSA Office</h4>
-            <p>Riyadh, Saudia Arabia</p>
-            <p>Phone: +966 58 363 9195</p>
+            <h4 className="font-semibold">
+              <T>KSA Office</T>
+            </h4>
+            <p>
+              <T>Riyadh, Saudia Arabia</T>
+            </p>
+            <p>
+              <T>Phone: +966 58 363 9195</T>
+            </p>
           </div>{" "}
           <div className="mb-2">
-            <h4 className="font-semibold">Pakistan Office</h4>
-            <p>Islamabad, Pakistan</p>
-            <p>Phone: +92 3238388294</p>
+            <h4 className="font-semibold">
+              <T>Pakistan Office</T>
+            </h4>
+            <p>
+              <T>Islamabad, Pakistan</T>
+            </p>
+            <p>
+              <T>Phone: +92 3238388294</T>
+            </p>
           </div>
           <div className="mb-1">
-            <h4 className="font-semibold">Mexico Office</h4>
+            <h4 className="font-semibold">
+              <T>Mexico Office</T>
+            </h4>
             <p>
-              Bahia Xaak, D 301, Turquesa Tower, Puerto Aventuras, Quintana Roo,
-              Mexico
+              <T>Bahia Xaak, D 301, Turquesa Tower, Puerto Aventuras, Quintana Roo, Mexico</T>
             </p>
-            <p>Phone: +52 1 998 347 3271</p>
+            <p>
+              <T>Phone: +52 1 998 347 3271</T>
+            </p>
           </div>
         </div>
 
         {/* Work Inquiries and Career */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Work Inquiries</h3>
+          <h3 className="text-lg font-semibold mb-4">
+            <T>Work Inquiries</T>
+          </h3>
           <p>
-            Interested in working with us? <br />
+            <T>Interested in working with us?</T> <br />
             <a
               href="mailto:contact@techliftup.com"
               className="text-red-600 font-semibold"
             >
-              info@techliftup.com
+              <T>info@techliftup.com</T>
             </a>
           </p>
           <div className="mt-4">
-            <h3 className="text-lg font-semibold mb-2">Career</h3>
+            <h3 className="text-lg font-semibold mb-2">
+              <T>Career</T>
+            </h3>
             <p>
-              Looking for a job opportunity? <br />
+              <T>Looking for a job opportunity?</T> <br />
               <a href="#" className="text-red-600 font-semibold">
-                See open positions
+                <T>See open positions</T>
               </a>
             </p>
           </div>
@@ -96,7 +118,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="mt-10 border-t pt-6 text-center text-sm text-gray-600">
         <p>
-          © {new Date().getFullYear()}, TechLiftUp Pvt Ltd. Made with passion by{" "}
+          <T> {new Date().getFullYear()}, TechLiftUp Pvt Ltd. Made with passion by </T>
           <span className="text-red-600 font-semibold">TechLiftUp</span>
         </p>
       </div>

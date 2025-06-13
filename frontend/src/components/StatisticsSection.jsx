@@ -1,3 +1,5 @@
+import { T } from "../context/LanguageContext";
+
 const stats = [
   {
     value: "500+",
@@ -24,7 +26,7 @@ const StatisticsSection = () => {
         {stats.map((stat, index) => (
           <div key={index} className="flex flex-col items-center">
             <h3 className="text-5xl font-bold mb-2">{stat.value}</h3>
-            <p className="text-lg">{stat.label}</p>
+            <p className="text-lg"><T>{stat.label}</T></p>
           </div>
         ))}
       </div>

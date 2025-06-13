@@ -2,8 +2,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
 import CallToAction from "./components/CallToAction";
-
 import WhatsappButton from "./components/WhatsappButton";
+import { T } from "./context/LanguageContext";
 
 const Team = () => {
   return (
@@ -13,21 +13,17 @@ const Team = () => {
         {/* Team Header */}
         <div className=" mb-12">
           <h2 className="text-4xl md:text-5xl font-bold  mb-4 text-red-500">
-            Team Members
+            <T>Team Members</T>
           </h2>
           <p className="text-2xl mb-8 text-justify max-w-3xl font-semibold text-gray-700 leading-relaxed">
-            At TechLiftUp, we combine innovation and expertise to deliver
-            cutting-edge solutions in software development, app creation,
-            digital marketing, and MEP design. With over 15+ years of
-            experience, we empower businesses with sustainable and efficient
-            outcomes, tailored to their unique needs.
+            <T>At TechLiftUp, we combine innovation and expertise to deliver cutting-edge solutions in software development, app creation, digital marketing, and MEP design. With over 15+ years of experience, we empower businesses with sustainable and efficient outcomes, tailored to their unique needs.</T>
           </p>
 
           <Link
             to="/#contact"
             className="mt-6 px-6 py-3 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition"
           >
-            Contact Us
+            <T>Contact Us</T>
           </Link>
         </div>
 
@@ -35,9 +31,11 @@ const Team = () => {
 
         {/* Team Members Section */}
         <div className="text-center">
-          <h4 className="text-center font-serif ">Our Team</h4>
+          <h4 className="text-center font-serif ">
+            <T>Our Team</T>
+          </h4>
           <h3 className="text-2xl md:text-3xl font-semibold text-red-500 mb-8 my-8">
-            Meet the Experts Behind TechLiftUp
+            <T>Meet the Experts Behind TechLiftUp</T>
           </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -54,7 +52,7 @@ const Team = () => {
                 Muhammad Sabir
               </h3>
               <p className="text-gray-500 text-lg">
-                Building Services Engineering Design Consultant
+                <T>Building Services Engineering Design Consultant</T>
               </p>
               {/* <p className="mt-2 text-gray-600 text-lg">
                 Expert in MEP systems design with extensive experience in
@@ -75,7 +73,7 @@ const Team = () => {
                 Ahmad Raza
               </h3>
               <p className="text-gray-500 text-lg">
-                CEO & Full Stack Developer
+                <T>CEO & Full Stack Developer</T>
               </p>
               {/* <p className="mt-2 text-gray-600 text-lg">
                 Passionate developer crafting innovative solutions with
@@ -95,7 +93,9 @@ const Team = () => {
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Qadeer Ahmad
               </h3>
-              <p className="text-gray-500 text-lg">Co Founder & IT Head</p>
+              <p className="text-gray-500 text-lg">
+                <T>Co Founder & IT Head</T>
+              </p>
               {/* <p className="mt-2 text-gray-600 text-lg">
                 Technology strategist driving digital transformation with
                 cutting-edge IT solutions and infrastructure.
@@ -115,7 +115,7 @@ const Team = () => {
                 Saul Chac
               </h3>
               <p className="text-gray-500 text-lg">
-                Business Development Manager
+                <T>Business Development Manager</T>
               </p>
               {/* <p className="mt-2 text-gray-600 text-lg">
                 Strategic business leader focused on expanding market reach and

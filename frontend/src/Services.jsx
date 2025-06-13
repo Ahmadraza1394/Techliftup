@@ -23,6 +23,7 @@ import { useState } from "react";
 
 import WhatsappButton from "./components/WhatsappButton";
 import CallToAction from "./components/CallToAction";
+import { T } from "./context/LanguageContext";
 
 // const approaches = [
 //   {
@@ -173,7 +174,7 @@ export default function Services() {
       <Header />
       {/* <section className="min-h-screen bg-gray-100 py-16 px-6 md:px-16 lg:px-24">
         <h2 className="text-center text-4xl font-bold mb-12 text-gray-900">
-          Our Services
+          <T>Our Services</T>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
@@ -185,8 +186,12 @@ export default function Services() {
               className="bg-sky-100 p-6 rounded-2xl shadow-md flex flex-col items-start"
             >
               <div className="text-sky-500 text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-700">{service.desc}</p>
+              <h3 className="text-xl font-semibold mb-2">
+                <T>{service.title}</T>
+              </h3>
+              <p className="text-gray-700">
+                <T>{service.desc}</T>
+              </p>
             </motion.div>
           ))}
         </div>
@@ -201,20 +206,22 @@ export default function Services() {
           className="mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-red-500">
-            Our Services
+            <T>Our Services</T>
           </h2>
           <p className="text-2xl mb-6 text-justify max-w-3xl font-semibold text-gray-700 leading-relaxed">
-            At TechLiftUp, we don’t just deliver services—we create value that
-            transforms businesses. Whether you’re shaping your digital presence
-            or engineering cutting-edge infrastructure, our solutions are
-            designed to drive growth, efficiency, and long-term success.
+            <T>
+              At TechLiftUp, we don’t just deliver services—we create value that
+              transforms businesses. Whether you’re shaping your digital presence
+              or engineering cutting-edge infrastructure, our solutions are
+              designed to drive growth, efficiency, and long-term success.
+            </T>
           </p>
 
           <Link
             to="/#contact"
             className="mt-6 px-6 py-3 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition"
           >
-            Contact Us
+            <T>Contact Us</T>
           </Link>
         </motion.div>
         <hr className="bg-gray-50 text-gray-50" />
@@ -222,7 +229,7 @@ export default function Services() {
       {/* Our Services */}
       <section className="min-h-screen bg-gray-100 py-16 px-6 md:px-12 lg:px-16">
         <h2 className="text-center text-4xl font-bold mb-12 text-sky-500">
-          Our Services
+          <T>Our Services</T>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
@@ -238,9 +245,11 @@ export default function Services() {
                 {service.icon}
               </div>
               <h3 className="text-4xl text-gray-100 font-semibold mb-3">
-                {service.title}
+                <T>{service.title}</T>
               </h3>
-              <p className="text-gray-50 text-2xl">{service.desc}</p>
+              <p className="text-gray-50 text-2xl">
+                <T>{service.desc}</T>
+              </p>
             </motion.div>
           ))}
         </div>
@@ -248,7 +257,7 @@ export default function Services() {
       {/* Our Approach */}
       <section className="bg-gray-100 px-2 pt-10 relative">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold flex items-center justify-center my-4 mb-10 text-sky-500">
-          Our Approach
+          <T>Our Approach</T>
         </h2>
         <div className="bg-sky-500 text-white p-2 sm:p-8 py-12 sm:py-12 rounded-2xl max-w-6xl mx-auto relative overflow-hidden">
           {/* Decorative Background Elements */}
@@ -282,7 +291,7 @@ export default function Services() {
                     : "bg-transparent border border-white"
                 }`}
               >
-                {approach.title}
+                <T>{approach.title}</T>
               </button>
             ))}
           </div>
@@ -302,10 +311,10 @@ export default function Services() {
             {/* Text */}
             <div className="lg:w-1/2">
               <h2 className="text-3xl sm:text-4xl md:text-5xl py-3 sm:py-5 font-bold">
-                {approaches[selected].title}
+                <T>{approaches[selected].title}</T>
               </h2>
               <p className="mt-2 sm:mt-4 text-lg sm:text-2xl md:text-3xl text-gray-200">
-                {approaches[selected].description}
+                <T>{approaches[selected].description}</T>
               </p>
             </div>
           </div>
@@ -314,7 +323,7 @@ export default function Services() {
 
       <section className="max-w-7xl mx-auto px-6 py-24">
         <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold text-center text-sky-500 mb-8">
-          What Sets Us Apart
+          <T>What Sets Us Apart</T>
         </h2>
 
         <div className="space-y-6">
@@ -323,11 +332,15 @@ export default function Services() {
             style={{ backgroundImage: "url('/assets/images/heroImg.jpg')" }}
           >
             <div className="bg-black bg-opacity-70 p-6 rounded-lg w-full h-full flex flex-col items-center justify-center">
-              <h3 className="text-3xl sm:text-5xl font-bold">Data-Insights</h3>
+              <h3 className="text-3xl sm:text-5xl font-bold">
+                <T>Data-Insights</T>
+              </h3>
               <p className="text-base sm:text-2xl mt-2">
-                Numbers tell stories too. We leverage analytics to understand
-                what works and what needs refinement. Our data-driven approach
-                ensures that every strategy is optimized for maximum impact.
+                <T>
+                  Numbers tell stories too. We leverage analytics to understand
+                  what works and what needs refinement. Our data-driven approach
+                  ensures that every strategy is optimized for maximum impact.
+                </T>
               </p>
             </div>
           </div>
@@ -338,11 +351,13 @@ export default function Services() {
           >
             <div className="bg-black bg-opacity-70 p-6 rounded-lg w-full h-full flex flex-col items-center justify-center">
               <h3 className="text-3xl sm:text-5xl font-bold">
-                Strategic Thinking
+                <T>Strategic Thinking</T>
               </h3>
               <p className="text-base sm:text-2xl mt-2">
-                We craft custom strategies that align with your brand’s goals,
-                ensuring measurable success and long-term growth.
+                <T>
+                  We craft custom strategies that align with your brand’s goals,
+                  ensuring measurable success and long-term growth.
+                </T>
               </p>
             </div>
           </div>
@@ -353,11 +368,13 @@ export default function Services() {
           >
             <div className="bg-black bg-opacity-70 p-6 rounded-lg w-full h-full flex flex-col items-center justify-center">
               <h3 className="text-3xl sm:text-5xl font-bold">
-                Creative Execution
+                <T>Creative Execution</T>
               </h3>
               <p className="text-base sm:text-2xl mt-2">
-                Our creative team designs compelling campaigns that engage
-                audiences, build trust, and drive real conversions.
+                <T>
+                  Our creative team designs compelling campaigns that engage
+                  audiences, build trust, and drive real conversions.
+                </T>
               </p>
             </div>
           </div>
@@ -368,11 +385,13 @@ export default function Services() {
           >
             <div className="bg-black bg-opacity-70 w-full h-full flex flex-col items-center justify-center p-6">
               <h3 className="text-3xl sm:text-5xl font-bold">
-                Sustainable Growth
+                <T>Sustainable Growth</T>
               </h3>
               <p className="text-base sm:text-2xl mt-2">
-                We focus on long-term impact, helping businesses scale
-                efficiently while maintaining a strong brand presence.
+                <T>
+                  We focus on long-term impact, helping businesses scale
+                  efficiently while maintaining a strong brand presence.
+                </T>
               </p>
             </div>
           </div>

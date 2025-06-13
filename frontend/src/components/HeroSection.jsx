@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import { T } from "../context/LanguageContext";
 
 const HeroSection = () => {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
@@ -9,7 +10,7 @@ const HeroSection = () => {
   return (
     <section
       ref={ref}
-      className="relative scroll-smooth bg-gradient-to-br from-sky-500 via-sky-500 to-sky-500 text-white min-h-screen px-6 md:px-16 lg:px-20 pt-24 pb-10 flex items-center"
+      className="relative scroll-smooth bg-gradient-to-br from-sky-500 via-sky-500 to-sky-500 text-white min-h-screen px-6 md:px-16 lg:px-20 pt-28 pb-10 flex items-center"
     >
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-sky-600 to-sky-400 opacity-30"></div>
@@ -57,7 +58,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="inline-flex items-center bg-sky-50/10 backdrop-blur-sm rounded-full px-6 py-2 mb-4 border border-sky-50/20 shadow-lg shadow-sky-500/20"
           >
-            <span className="text-sky-50 font-medium">Digital Marketing Agency That Drives Revenue</span>
+            <span className="text-sky-50 font-medium"><T>Digital Marketing Agency That Drives Revenue</T></span>
           </motion.div>
           
           <motion.h1
@@ -66,10 +67,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight"
           >
-            Unlock Revenue Growth with{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-200 ">
-              Digital Marketing
-            </span>
+            <T>Unlock Revenue Growth with </T>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-200 "><T>Digital Marketing</T></span>
           </motion.h1>
 
           <motion.p
@@ -78,7 +77,8 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             className="text-lg md:text-xl lg:text-2xl text-sky-100 max-w-4xl mx-auto"
           >
-         At TechLiftUp, we empower businesses through cutting-edge software development, specializing in web and app development,SEO, AI Automation, AI Chatbot, AI Email Automation to drive digital transformation. Additionally, we excel in comprehensive building design services.       </motion.p>
+            <T>At TechLiftUp, we empower businesses through cutting-edge software development, specializing in web and app development, SEO, AI Automation, AI Chatbot, AI Email Automation to drive digital transformation. Additionally, we excel in comprehensive building design services.</T>
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -90,14 +90,14 @@ const HeroSection = () => {
               to="/services"
               className="group flex items-center justify-center bg-gradient-to-r from-red-500 to-red-600 text-white font-medium px-8 py-4 rounded-lg hover:shadow-lg hover:shadow-red-500/30 transition-all duration-300 transform hover:scale-105"
             >
-              Explore Services
+              <T>Explore Services</T>
               <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href="#contact"
               className="flex items-center justify-center bg-transparent text-white font-medium px-8 py-4 rounded-lg border-2 border-white/70 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
             >
-              Contact Us
+              <T>Contact Us</T>
             </a>
           </motion.div>
           

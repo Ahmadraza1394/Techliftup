@@ -8,6 +8,7 @@ import {
   FaClipboard,
   FaTools,
 } from "react-icons/fa";
+import { T } from "../context/LanguageContext";
 
 const AboutUsSection = () => {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
@@ -33,7 +34,7 @@ const AboutUsSection = () => {
           transition={{ duration: 0.5 }}
           className="text-lg text-red-500 font-semibold mb-2 uppercase"
         >
-          Who We Are
+          <T>Who We Are</T>
         </motion.h2>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -41,7 +42,7 @@ const AboutUsSection = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
         >
-          Bringing Innovation in Software and Building Services Design
+          <T>Bringing Innovation in Software and Building Services Design</T>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 40 }}
@@ -49,17 +50,9 @@ const AboutUsSection = () => {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="text-gray-300 leading-relaxed text-lg md:text-xl"
         >
-          TechLiftUp combines expertise in software development and building
-          services engineering to deliver end-to-end solutions for businesses
-          worldwide. From crafting innovative digital platforms to designing
-          state-of-the-art mechanical, electrical, and plumbing (MEP) systems,
-          we empower growth and sustainability.
-          <br />
-          <br />
-          Our team comprises skilled professionals passionate about delivering
-          value, maintaining quality, and building lasting relationships. We
-          emphasize innovation, strategic collaboration, and client satisfaction
-          across every project we undertake.
+          <T>
+            TechLiftUp combines expertise in software development and building services engineering to deliver end-to-end solutions for businesses worldwide. From crafting innovative digital platforms to designing state-of-the-art mechanical, electrical, and plumbing (MEP) systems, we empower growth and sustainability. Our team comprises skilled professionals passionate about delivering value, maintaining quality, and building lasting relationships. We emphasize innovation, strategic collaboration, and client satisfaction across every project we undertake.
+          </T>
         </motion.p>
       </div>
 
@@ -75,10 +68,11 @@ const AboutUsSection = () => {
           className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-lg text-center hover:bg-white/20 transition duration-300"
         >
           <FaTrophy className="text-red-500 text-4xl mb-4 mx-auto" />
-          <h3 className="text-xl font-semibold mb-2">15+ Years of Expertise</h3>
+          <h3 className="text-xl font-semibold mb-2">
+            <T>15+ Years of Expertise</T>
+          </h3>
           <p className="text-gray-300">
-            Decades of experience in delivering exceptional digital and
-            engineering solutions.
+            <T>Decades of experience in delivering exceptional digital and engineering solutions.</T>
           </p>
         </motion.div>
 
@@ -93,11 +87,10 @@ const AboutUsSection = () => {
         >
           <FaProjectDiagram className="text-red-500 text-4xl mb-4 mx-auto" />
           <h3 className="text-xl font-semibold mb-2">
-            500+ Projects Delivered
+            <T>500+ Projects Delivered</T>
           </h3>
           <p className="text-gray-300">
-            Delivered over 500+ successful projects in digital platforms and MEP
-            engineering design.
+            <T>Delivered over 500+ successful projects in digital platforms and MEP engineering design.</T>
           </p>
         </motion.div>
 
@@ -111,10 +104,11 @@ const AboutUsSection = () => {
           className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-lg text-center hover:bg-white/20 transition duration-300"
         >
           <FaHeadset className="text-red-500 text-4xl mb-4 mx-auto" />
-          <h3 className="text-xl font-semibold mb-2">Comprehensive Support</h3>
+          <h3 className="text-xl font-semibold mb-2">
+            <T>Comprehensive Support</T>
+          </h3>
           <p className="text-gray-300">
-            Dedicated support to ensure seamless operations for digital and
-            engineering projects.
+            <T>Dedicated support to ensure seamless operations for digital and engineering projects.</T>
           </p>
         </motion.div>
 
@@ -128,10 +122,11 @@ const AboutUsSection = () => {
           className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-lg text-center hover:bg-white/20 transition duration-300"
         >
           <FaUsers className="text-red-500 text-4xl mb-4 mx-auto" />
-          <h3 className="text-xl font-semibold mb-2">Skilled Professionals</h3>
+          <h3 className="text-xl font-semibold mb-2">
+            <T>Skilled Professionals</T>
+          </h3>
           <p className="text-gray-300">
-            A team of experienced engineers and software developers dedicated to
-            achieving excellence.
+            <T>A team of experienced engineers and software developers dedicated to achieving excellence.</T>
           </p>
         </motion.div>
 
@@ -145,10 +140,11 @@ const AboutUsSection = () => {
           className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-lg text-center hover:bg-white/20 transition duration-300"
         >
           <FaClipboard className="text-red-500 text-4xl mb-4 mx-auto" />
-          <h3 className="text-xl font-semibold mb-2">Integrated Solutions</h3>
+          <h3 className="text-xl font-semibold mb-2">
+            <T>Integrated Solutions</T>
+          </h3>
           <p className="text-gray-300">
-            Unified digital and building solutions tailored to your unique
-            business needs.
+            <T>Unified digital and building solutions tailored to your unique business needs.</T>
           </p>
         </motion.div>
 
@@ -162,10 +158,11 @@ const AboutUsSection = () => {
           className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-lg text-center hover:bg-white/20 transition duration-300"
         >
           <FaTools className="text-red-500 text-4xl mb-4 mx-auto" />
-          <h3 className="text-xl font-semibold mb-2">BIM & MEP Expertise</h3>
+          <h3 className="text-xl font-semibold mb-2">
+            <T>BIM & MEP Expertise</T>
+          </h3>
           <p className="text-gray-300">
-            Expertise in Building Information Modeling (BIM) and MEP systems for
-            efficient building solutions.
+            <T>Expertise in Building Information Modeling (BIM) and MEP systems for efficient building solutions.</T>
           </p>
         </motion.div>
       </div>

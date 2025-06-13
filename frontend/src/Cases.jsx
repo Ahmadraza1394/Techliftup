@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import WhatsappButton from "./components/WhatsappButton";
+import { T } from "./context/LanguageContext";
 
 const cases = [
   {
@@ -66,12 +67,12 @@ const cases = [
   },
   {
     id: 7,
-    title: "Passion Farm ",
-    description: "Passion Form is Ecommerce Store that sell organic products to customers ",
-    image: "/assets/images/passionfarm.png", // Add your image path here
+    title: "Clearance Management System ",
+    description: "Clearance Management System is a system that helps educational institutions manage their clearance process ",
+    image: "/assets/images/clearanceSystem.png", // Add your image path here
     details:
-      "Passion Form is ecommerce Store that sell organic products to customers",
-    link: "/cases/passionfarm", // Corrected route to individual case
+      "Clearance Management System is a system that helps educational institutions manage their clearance process",
+    link: "/cases/clearance-management-system", // Corrected route to individual case
   },
   {
     id: 8,
@@ -83,15 +84,24 @@ const cases = [
     link: "/cases/cleanwater", // Corrected route to individual case
   }, {
     id: 9,
-    title: "Brand Wave Digital",
-    description: "Digital Marketing Agency",
-    image: "/assets/images/brandwavedigital.png", // Add your image path here
+    title: "The Hour Glass",
+    description: "The Hour Glass is a watches store that sell watches to customers ",
+    image: "/assets/images/hourGlass.png", // Add your image path here
     details:
-      "Brand Wave Digital is a digital marketing agency that helps businesses grow.",
-    link: "/cases/brand-wave-digital", // Corrected route to individual case
+      "The Hour Glass is a watches store that sell watches to customers",
+    link: "/cases/hourglass", // Corrected route to individual case
   },
   {
     id: 10,
+    title: "Passion Farm ",
+    description: "Passion Form is Ecommerce Store that sell organic products to customers ",
+    image: "/assets/images/passionfarm.png", // Add your image path here
+    details:
+      "Passion Form is ecommerce Store that sell organic products to customers",
+    link: "/cases/passionfarm", // Corrected route to individual case
+  },
+  {
+    id: 11,
     title: "Electro Santos ",
     description: "Electro Santos Provides Electric Products and services ",
     image: "/assets/images/electrosanto.png", // Add your image path here
@@ -99,27 +109,22 @@ const cases = [
       "Electro Santos Provides Electric Products and services",
     link: "/cases/electrosanto", // Corrected route to individual case
   },
+  {
+    id: 12,
+    title: "Brand Wave Digital",
+    description: "Digital Marketing Agency",
+    image: "/assets/images/brandwavedigital.png", // Add your image path here
+    details:
+      "Brand Wave Digital is a digital marketing agency that helps businesses grow.",
+    link: "/cases/brand-wave-digital", // Corrected route to individual case
+  }
 ];
 
 const Cases = () => {
   return (
     <>
       <Header />
-      {/* <div
-        className="relative w-full pt-32 h-0 mb-2"
-        style={{ paddingBottom: "56.25%" }}
-      >
-        <iframe
-          className="absolute top-0 left-0 w-full h-full"
-          src="https://player.vimeo.com/video/1051829084?autoplay=1&loop=1&background=1"
-          width="640"
-          height="360"
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-          title="Video Title"
-        ></iframe>
-      </div> */}
+      
       <section className="team-section bg-gray-50 px-6 md:px-12 pt-32">
         {/* Team Header */}
         <motion.div
@@ -129,20 +134,17 @@ const Cases = () => {
           className="mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-red-500">
-            Our Cases
+            <T>Our Cases</T>
           </h2>
           <p className="text-2xl mb-6 text-justify max-w-3xl font-semibold text-gray-700 leading-relaxed">
-            Every case is unique, and TechLiftUp takes pride in crafting
-            solutions tailored to your business needs. From software development
-            to building MEP engineering platforms, our versatile approach
-            ensures the highest quality and measurable results.
+            <T>Every case is unique, and TechLiftUp takes pride in crafting solutions tailored to your business needs. From software development to building MEP engineering platforms, our versatile approach ensures the highest quality and measurable results.</T>
           </p>
 
           <Link
             to="/#contact"
             className="mt-6 px-6 py-3 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 transition"
           >
-            Contact Us
+            <T>Contact Us</T>
           </Link>
         </motion.div>
         <hr className="bg-gray-50 text-gray-50" />
@@ -156,9 +158,11 @@ const Cases = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent  bg-sky-500">Our Success Stories</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent  bg-sky-500">
+            <T>Our Success Stories</T>
+          </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-700">
-            Discover how we've helped businesses transform their digital presence and achieve remarkable growth.
+            <T>Discover how we've helped businesses transform their digital presence and achieve remarkable growth.</T>
           </p>
         </motion.div>
 
@@ -183,14 +187,16 @@ const Cases = () => {
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                  {caseItem.title}
+                  <T>{caseItem.title}</T>
                 </h2>
-                <p className="text-gray-600 mb-4 line-clamp-2 flex-grow">{caseItem.description}</p>
+                <p className="text-gray-600 mb-4 line-clamp-2 flex-grow">
+                  <T>{caseItem.description}</T>
+                </p>
                 <Link
                   to={caseItem.link}
                   className="inline-flex items-center px-4 py-2 bg-sky-500 text-white font-medium rounded-md hover:bg-sky-600 transition-colors duration-300 mt-auto"
                 >
-                  View Case Study
+                  <T>View Case Study</T>
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                   </svg>

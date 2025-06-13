@@ -5,6 +5,7 @@ import {
   FaLightbulb,
   FaHandshake,
 } from "react-icons/fa";
+import { T } from "../context/LanguageContext";
 
 const steps = [
   {
@@ -33,7 +34,7 @@ const HowWeWorkSection = () => {
   return (
     <section className="py-16 px-4 md:px-14 text-center bg-gray-100">
       <h2 className="text-3xl md:text-4xl font-bold mb-12 text-sky-500">
-        How We Work
+        <T>How We Work</T>
       </h2>
       <div className="flex flex-col md:flex-row items-center justify-around space-y-8 md:space-y-0 md:space-x-6 lg:space-x-8">
         {steps.map((step, index) => (
@@ -57,7 +58,7 @@ const HowWeWorkSection = () => {
               {String(step.id).padStart(2, "0")}
             </div>
             <h3 className="text-lg md:text-xl font-semibold text-gray-700">
-              {step.title}
+              <T>{step.title}</T>
             </h3>
           </motion.div>
         ))}
