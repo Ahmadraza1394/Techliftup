@@ -18,6 +18,7 @@ const Header = () => {
   // Translate menu items
   const homeText = useTranslation("Home");
   const servicesText = useTranslation("Services");
+  const blogText = useTranslation("Blogs");
   const caseStudiesText = useTranslation("Case Studies");
   const teamText = useTranslation("Our Team");
   const aboutText = useTranslation("About Us");
@@ -33,7 +34,10 @@ const Header = () => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsDropdownOpen(false);
       }
-      if (mobileDropdownRef.current && !mobileDropdownRef.current.contains(event.target)) {
+      if (
+        mobileDropdownRef.current &&
+        !mobileDropdownRef.current.contains(event.target)
+      ) {
         setIsMobileDropdownOpen(false);
       }
     };
@@ -70,6 +74,7 @@ const Header = () => {
           >
             {servicesText}
           </Link>
+
           <Link
             to="/cases"
             className="text-gray-800 hover:text-sky-600 transition font-bold text-base xl:text-lg"
@@ -89,44 +94,67 @@ const Header = () => {
             {aboutText}
           </Link>
           <Link
+            to="/blog"
+            className="text-gray-800 hover:text-sky-600 transition font-bold text-base xl:text-lg"
+          >
+            {blogText}
+          </Link>
+          <Link
             to="/#contact"
             className="bg-red-600 text-white px-3 py-2 rounded-md hover:bg-red-700 transition font-bold text-base xl:text-lg"
           >
             {contactText}
           </Link>
-          
+
           {/* Language Switcher Dropdown - Desktop */}
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="text-gray-800 hover:text-sky-600 transition font-bold flex items-center"
             >
-              {language === 'en' ? 
-                <img src="/assets/images/uk.png" alt="English" className="w-6 h-6 mr-1" /> : 
-                <img src="/assets/images/spain.png" alt="Spanish" className="w-6 h-6 mr-1" />
-              }
-              <span className="ml-1">{language === 'en' ? 'EN' : 'ES'}</span>
+              {language === "en" ? (
+                <img
+                  src="/assets/images/uk.png"
+                  alt="English"
+                  className="w-6 h-6 mr-1"
+                />
+              ) : (
+                <img
+                  src="/assets/images/spain.png"
+                  alt="Spanish"
+                  className="w-6 h-6 mr-1"
+                />
+              )}
+              <span className="ml-1">{language === "en" ? "EN" : "ES"}</span>
             </button>
             {isDropdownOpen && (
               <div className="absolute top-full right-0 mt-1 bg-white shadow-md rounded-md py-2 z-50 min-w-[120px]">
-                <button 
+                <button
                   onClick={() => {
-                    toggleLanguage('en');
+                    toggleLanguage("en");
                     setIsDropdownOpen(false);
                   }}
                   className="flex items-center px-4 py-2 hover:bg-gray-100 w-full"
                 >
-                  <img src="/assets/images/uk.png" alt="English" className="w-6 h-6 mr-2" />
+                  <img
+                    src="/assets/images/uk.png"
+                    alt="English"
+                    className="w-6 h-6 mr-2"
+                  />
                   <span>English</span>
                 </button>
-                <button 
+                <button
                   onClick={() => {
-                    toggleLanguage('es');
+                    toggleLanguage("es");
                     setIsDropdownOpen(false);
                   }}
                   className="flex items-center px-4 py-2 hover:bg-gray-100 w-full"
                 >
-                  <img src="/assets/images/spain.png" alt="Spanish" className="w-6 h-6 mr-2" />
+                  <img
+                    src="/assets/images/spain.png"
+                    alt="Spanish"
+                    className="w-6 h-6 mr-2"
+                  />
                   <span>Español</span>
                 </button>
               </div>
@@ -142,31 +170,48 @@ const Header = () => {
               onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
               className="text-gray-800 hover:text-sky-600 transition font-bold flex items-center"
             >
-              {language === 'en' ? 
-                <img src="/assets/images/uk.png" alt="English" className="w-6 h-6" /> : 
-                <img src="/assets/images/spain.png" alt="Spanish" className="w-6 h-6" />
-              }
+              {language === "en" ? (
+                <img
+                  src="/assets/images/uk.png"
+                  alt="English"
+                  className="w-6 h-6"
+                />
+              ) : (
+                <img
+                  src="/assets/images/spain.png"
+                  alt="Spanish"
+                  className="w-6 h-6"
+                />
+              )}
             </button>
             {isMobileDropdownOpen && (
               <div className="absolute top-full right-0 mt-1 bg-white shadow-md rounded-md py-2 z-50 min-w-[120px]">
-                <button 
+                <button
                   onClick={() => {
-                    toggleLanguage('en');
+                    toggleLanguage("en");
                     setIsMobileDropdownOpen(false);
                   }}
                   className="flex items-center px-4 py-2 hover:bg-gray-100 w-full"
                 >
-                  <img src="/assets/images/uk.png" alt="English" className="w-6 h-6 mr-2" />
+                  <img
+                    src="/assets/images/uk.png"
+                    alt="English"
+                    className="w-6 h-6 mr-2"
+                  />
                   <span>English</span>
                 </button>
-                <button 
+                <button
                   onClick={() => {
-                    toggleLanguage('es');
+                    toggleLanguage("es");
                     setIsMobileDropdownOpen(false);
                   }}
                   className="flex items-center px-4 py-2 hover:bg-gray-100 w-full"
                 >
-                  <img src="/assets/images/spain.png" alt="Spanish" className="w-6 h-6 mr-2" />
+                  <img
+                    src="/assets/images/spain.png"
+                    alt="Spanish"
+                    className="w-6 h-6 mr-2"
+                  />
                   <span>Español</span>
                 </button>
               </div>
@@ -205,6 +250,13 @@ const Header = () => {
                 onClick={toggleMenu}
               >
                 {servicesText}
+              </Link>
+              <Link
+                to="/blog"
+                className="text-gray-800 hover:text-sky-600 transition font-bold text-xl w-full text-center py-2"
+                onClick={toggleMenu}
+              >
+                {blogText}
               </Link>
               <Link
                 to="/cases"

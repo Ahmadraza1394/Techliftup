@@ -22,7 +22,7 @@ const logos = [
 
 const LogoSlider = () => {
   const [animationSpeed, setAnimationSpeed] = useState("100s");
-  
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
@@ -45,7 +45,7 @@ const LogoSlider = () => {
         <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
         <div className="absolute bottom-0 -right-4 w-72 h-72 bg-red-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,15 +55,22 @@ const LogoSlider = () => {
           className="mb-16 text-center"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-800">
-            <T>Trusted By </T><span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-sky-500"><T>Industry Leaders</T></span>
+            <T>Trusted By </T>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-sky-500">
+              <T>Industry Leaders</T>
+            </span>
           </h2>
           <div className="w-24 h-1 bg-red-500 mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
-            <T>Partnering with forward-thinking companies to deliver exceptional digital solutions</T>
+            <T>
+              We partner with fast-moving startups, established enterprises, and
+              global innovators to build digital systems that drive revenue,
+              reduce manual work, and scale operations.
+            </T>
           </p>
         </motion.div>
       </div>
-      
+
       <div className="logo-slider-container overflow-hidden">
         <div
           className="flex items-center whitespace-nowrap logo-slider"

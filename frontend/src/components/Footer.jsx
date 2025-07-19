@@ -30,6 +30,12 @@ const Footer = () => {
               <FaFacebookF />
             </a>
             <a
+              href="https://www.linkedin.com/company/techliftup/"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
               href="https://www.instagram.com/techliftup/"
               aria-label="Instagram"
             >
@@ -38,12 +44,6 @@ const Footer = () => {
             {/* <a href="#" aria-label="Twitter">
               <FaTwitter />
             </a> */}
-            <a
-              href="https://www.linkedin.com/company/techliftup/"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedinIn />
-            </a>
           </div>
         </div>
 
@@ -59,9 +59,7 @@ const Footer = () => {
             <p>
               <T>Riyadh, Saudia Arabia</T>
             </p>
-            <p>
-              <T>Phone: +966 58 363 9195</T>
-            </p>
+            <p>{/* <T>Phone: +966 58 363 9195</T> */}</p>
           </div>{" "}
           <div className="mb-2">
             <h4 className="font-semibold">
@@ -70,20 +68,19 @@ const Footer = () => {
             <p>
               <T>Islamabad, Pakistan</T>
             </p>
-            <p>
-              <T>Phone: +92 3238388294</T>
-            </p>
+            <p>{/* <T>Phone: +92 3238388294</T> */}</p>
           </div>
           <div className="mb-1">
             <h4 className="font-semibold">
               <T>Mexico Office</T>
             </h4>
             <p>
-              <T>Bahia Xaak, D 301, Turquesa Tower, Puerto Aventuras, Quintana Roo, Mexico</T>
+              <T>
+                Bahia Xaak, D 301, Turquesa Tower, Puerto Aventuras, Quintana
+                Roo, Mexico
+              </T>
             </p>
-            <p>
-              <T>Phone: +52 1 998 347 3271</T>
-            </p>
+            <p>{/* <T>Phone: +52 1 998 347 3271</T> */}</p>
           </div>
         </div>
 
@@ -118,7 +115,10 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="mt-10 border-t pt-6 text-center text-sm text-gray-600">
         <p>
-          <T> {new Date().getFullYear()}, TechLiftUp Pvt Ltd. Made with passion by </T>
+          <T>
+            {" "}
+            {new Date().getFullYear()}, TechLiftUp Pvt Ltd. Made with passion by{" "}
+          </T>
           <span className="text-red-600 font-semibold">TechLiftUp</span>
         </p>
       </div>

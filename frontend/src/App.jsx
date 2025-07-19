@@ -8,6 +8,8 @@ import Cases from "./Cases";
 import Team from "./Team";
 import CaseDetail from "./CaseDetail";
 import Services from "./Services";
+import Blog from "./Blog";
+import BlogPost from "./BlogPost";
 import Chatbot from "./components/Chatbot";
 import LeadsDashboard from "./pages/LeadsDashboard";
 import { LanguageProvider } from "./context/LanguageContext";
@@ -31,6 +33,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/about" element={<About />} />
           <Route path="/team" element={<Team />} />
           <Route path="/cases" element={<Cases />} />

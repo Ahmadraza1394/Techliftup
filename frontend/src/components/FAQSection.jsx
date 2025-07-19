@@ -10,14 +10,14 @@ const faqs = [
       "TechLiftUp integrates expertise in both digital solutions and building services design, offering a unique combination of technical and engineering excellence.",
   },
   {
-    question: "Do you provide customized solutions?",
+    question: "Do you provide custom solutions?",
     answer:
-      "Absolutely! Our team tailors every solution to your specific business needs, ensuring scalability and effectiveness.",
+      "Yes – every business is different, and we build around your exact needs.",
   },
   {
     question: "Are your services cost-effective?",
     answer:
-      "Yes, we prioritize delivering high-quality solutions while maintaining competitive pricing to maximize your return on investment.",
+      "Our goal is ROI – many clients earn back what they pay within the first 90 days.",
   },
   {
     question: "How experienced is your team?",
@@ -51,10 +51,15 @@ const FAQSection = () => {
           <T>Frequently Asked Questions</T>
         </h3>
         <h2 className="text-5xl font-extrabold mb-8 leading-tight">
-          <T>Why Choose </T><span className="text-red-500">TechLiftUp</span><T> for Your Business</T>
+          <T>Why Choose </T>
+          <span className="text-red-500">TechLiftUp</span>
+          <T> for Your Business</T>
         </h2>
         <p className="text-gray-700 text-lg leading-relaxed">
-          <T>Explore some of the most common questions about our services, expertise, and approach to helping businesses succeed.</T>
+          <T>
+            Explore some of the most common questions about our services,
+            expertise, and approach to helping businesses succeed.
+          </T>
         </p>
       </div>
 

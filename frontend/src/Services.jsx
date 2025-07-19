@@ -25,32 +25,6 @@ import WhatsappButton from "./components/WhatsappButton";
 import CallToAction from "./components/CallToAction";
 import { T } from "./context/LanguageContext";
 
-// const approaches = [
-//   {
-//     title: "Strategic Planning",
-//     description:
-//       "We begin by understanding your brand’s ethos, values, and aspirations. Our team delves deep into audience analysis, identifying their behaviors, preferences, and where they congregate online.",
-//     image: "/assets/images/testimonialImg.jpg",
-//   },
-//   {
-//     title: "Content Strategy",
-//     description:
-//       "Our content strategy ensures your brand voice remains consistent and impactful. We craft engaging narratives that captivate audiences and drive meaningful interactions.",
-//     image: "/assets/images/testimonialImg.jpg",
-//   },
-//   {
-//     title: "Engagement",
-//     description:
-//       "Building strong relationships with your audience through interactive content and real-time communication, fostering trust and loyalty.",
-//     image: "/assets/images/testimonialImg.jpg",
-//   },
-//   {
-//     title: "Building",
-//     description:
-//       "From launching campaigns to brand expansion, we create sustainable growth strategies that enhance your digital presence effectively.",
-//     image: "/assets/images/main-img.png",
-//   },
-// ];
 const approaches = [
   {
     title: "Requirement Analysis",
@@ -111,8 +85,8 @@ const services = [
   },
   {
     icon: <FaMagento />,
-    title: "App Management & Maintenance",
-    desc: "Regular updates and performance optimization.",
+    title: "Cold Email Campaign",
+    desc: "Generate leads with personalized cold email campaigns.",
   },
   {
     icon: <FaBullhorn />,
@@ -211,9 +185,9 @@ export default function Services() {
           <p className="text-2xl mb-6 text-justify max-w-3xl font-semibold text-gray-700 leading-relaxed">
             <T>
               At TechLiftUp, we don’t just deliver services—we create value that
-              transforms businesses. Whether you’re shaping your digital presence
-              or engineering cutting-edge infrastructure, our solutions are
-              designed to drive growth, efficiency, and long-term success.
+              transforms businesses. Whether you’re shaping your digital
+              presence or engineering cutting-edge infrastructure, our solutions
+              are designed to drive growth, efficiency, and long-term success.
             </T>
           </p>
 

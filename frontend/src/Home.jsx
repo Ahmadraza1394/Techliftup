@@ -39,7 +39,7 @@ const Home = () => {
       <FAQSection />
       <HowWeWorkSection />
       <StatisticsSection />
-      <OurProcess />
+      {/* <OurProcess /> */}
       <div ref={contactRef}>
         <ContactForm />
       </div>

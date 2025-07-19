@@ -16,13 +16,13 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-sky-600 to-sky-400 opacity-30"></div>
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-20 animate-blob"></div>
-          <div 
+          <div
             className="absolute bottom-40 right-20 w-96 h-96 bg-amber-200 rounded-full mix-blend-overlay filter blur-3xl opacity-20"
-            style={{animation: "morph 12s ease-in-out infinite"}}
+            style={{ animation: "morph 12s ease-in-out infinite" }}
           ></div>
-          <div 
+          <div
             className="absolute -bottom-20 left-1/3 w-64 h-64 bg-sky-200 rounded-full mix-blend-overlay filter blur-3xl opacity-20"
-            style={{animation: "morph 15s ease-in-out infinite 2s"}}
+            style={{ animation: "morph 15s ease-in-out infinite 2s" }}
           ></div>
         </div>
         <style>{`
@@ -44,7 +44,7 @@ const HeroSection = () => {
           }
         `}</style>
       </div>
-      
+
       <div className="container mx-auto relative z-20 max-w-6xl">
         <motion.div
           initial={{ opacity: 0 }}
@@ -58,17 +58,21 @@ const HeroSection = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="inline-flex items-center bg-sky-50/10 backdrop-blur-sm rounded-full px-6 py-2 mb-4 border border-sky-50/20 shadow-lg shadow-sky-500/20"
           >
-            <span className="text-sky-50 font-medium"><T>Digital Marketing Agency That Drives Revenue</T></span>
+            <span className="text-sky-50 font-medium">
+              <T>Digital Marketing Agency That Drives Your Revenue</T>
+            </span>
           </motion.div>
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight"
           >
-            <T>Unlock Revenue Growth with </T>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-200 "><T>Digital Marketing</T></span>
+            <T>Unlock Your Revenue Growth with </T>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-50 to-gray-200 ">
+              <T>Digital Marketing</T>
+            </span>
           </motion.h1>
 
           <motion.p
@@ -77,7 +81,13 @@ const HeroSection = () => {
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             className="text-lg md:text-xl lg:text-2xl text-sky-100 max-w-4xl mx-auto"
           >
-            <T>At TechLiftUp, we empower businesses through cutting-edge software development, specializing in web and app development, SEO, AI Automation, AI Chatbot, AI Email Automation to drive digital transformation. Additionally, we excel in comprehensive building design services.</T>
+            <T>
+              You'll get automated leads and convert more clients with our
+              AI-powered websites and marketing. You'll have websites and
+              automation systems that get you found, booked, and followed up.
+              Additionally, you'll receive comprehensive building design
+              services tailored to your needs.
+            </T>
           </motion.p>
 
           <motion.div
@@ -100,15 +110,14 @@ const HeroSection = () => {
               <T>Contact Us</T>
             </a>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.8 }}
             className="mt-12 relative w-full max-w-4xl mx-auto"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-sky-400/20 to-amber-400/20 rounded-3xl blur-xl transform -rotate-1"></div>
-            
           </motion.div>
         </motion.div>
       </div>
