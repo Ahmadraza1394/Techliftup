@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-sky-500 via-sky-600 to-sky-500 relative overflow-hidden">
+    <section className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-sky-400 via-sky-500 to-sky-400 relative overflow-hidden">
       {/* Background overlay for extra depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
 
