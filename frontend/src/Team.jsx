@@ -16,7 +16,13 @@ const Team = () => {
             <T>Team Members</T>
           </h2>
           <p className="text-2xl mb-8 text-justify max-w-3xl font-semibold text-gray-700 leading-relaxed">
-            <T>At TechLiftUp, we combine innovation and expertise to deliver cutting-edge solutions in software development, app creation, digital marketing, and MEP design. With over 15+ years of experience, we empower businesses with sustainable and efficient outcomes, tailored to their unique needs.</T>
+            <T>
+              At TechLiftUp, we combine innovation and expertise to deliver
+              cutting-edge solutions in software development, app creation,
+              digital marketing, and MEP design. With over 15+ years of
+              experience, we empower businesses with sustainable and efficient
+              outcomes, tailored to their unique needs.
+            </T>
           </p>
 
           <Link
@@ -38,7 +44,7 @@ const Team = () => {
             <T>Meet the Experts Behind TechLiftUp</T>
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* <!-- Team Member 1 --> */}
             <div className="text-center">
               <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
@@ -54,41 +60,33 @@ const Team = () => {
               <p className="text-gray-500 text-lg">
                 <T>Building Services Engineering Design Consultant</T>
               </p>
-              {/* <p className="mt-2 text-gray-600 text-lg">
-                Expert in MEP systems design with extensive experience in
-                sustainable building solutions and energy optimization.
-              </p> */}
             </div>
 
             {/* <!-- Team Member 2 --> */}
             <div className="text-center">
               <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
                 <img
-                  src="/assets/images/ahmadimg.png"
+                  src="/assets/images/ahmadimg1.png"
                   alt="Ahmad Raza"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-contain transform rotate-2 brightness-100"
                 />
               </div>
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Ahmad Raza
               </h3>
               <p className="text-gray-500 text-lg">
-                <T>CEO & Full Stack Developer</T>
+                <T>CEO & Founder</T>
               </p>
-              {/* <p className="mt-2 text-gray-600 text-lg">
-                Passionate developer crafting innovative solutions with
-                expertise in both frontend and backend technologies.
-              </p> */}
             </div>
 
             {/* <!-- Team Member 3 --> */}
             <div className="text-center">
-              <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
+              <div className="w-64 h-64 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
                 <img
                   src="/assets/images/qadeer.png"
                   alt="Qadeer Ahmad"
-                  className="w-full h-full object-cover object-top shadow-dark shadow-md"
-                />  
+                  className="w-full h-full object-cover object-contain shadow-dark shadow-md"
+                />
               </div>
               <h3 className="text-xl font-semibold text-gray-700 mt-4">
                 Qadeer Ahmad
@@ -96,10 +94,6 @@ const Team = () => {
               <p className="text-gray-500 text-lg">
                 <T>Co Founder & IT Head</T>
               </p>
-              {/* <p className="mt-2 text-gray-600 text-lg">
-                Technology strategist driving digital transformation with
-                cutting-edge IT solutions and infrastructure.
-              </p> */}
             </div>
 
             {/* <!-- Team Member 4 --> */}
@@ -117,10 +111,23 @@ const Team = () => {
               <p className="text-gray-500 text-lg">
                 <T>Business Development Manager</T>
               </p>
-              {/* <p className="mt-2 text-gray-600 text-lg">
-                Strategic business leader focused on expanding market reach and
-                fostering valuable client relationships.
-              </p> */}
+            </div>
+
+            {/* <!-- Team Member 5 --> */}
+            <div className="text-center">
+              <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
+                <img
+                  src="/assets/images/mounie.jpeg"
+                  alt="Mounie Célestin"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-700 mt-4">
+                Mounie Célestin
+              </h3>
+              <p className="text-gray-500 text-lg">
+                <T>Strategic and Growth Partner</T>
+              </p>
             </div>
           </div>
         </div>

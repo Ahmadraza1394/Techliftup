@@ -107,7 +107,7 @@ const Header = () => {
           </Link>
 
           {/* Language Switcher Dropdown - Desktop */}
-          <div className="relative" ref={dropdownRef}>
+          {/* <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="text-gray-800 hover:text-sky-600 transition font-bold flex items-center"
@@ -159,7 +159,7 @@ const Header = () => {
                 </button>
               </div>
             )}
-          </div>
+          </div> */}
         </nav>
 
         {/* Mobile Menu Button and Language Switcher */}
