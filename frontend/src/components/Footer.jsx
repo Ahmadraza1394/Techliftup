@@ -54,21 +54,20 @@ const Footer = () => {
           </h3>
           <div>
             <h4 className="font-semibold">
+              <T>U.S. Office</T>
+            </h4>
+            <p>
+              <T>1295 River Street, Boston, MA 02136</T>
+            </p>
+          </div>{" "}
+          <div className="mb-2">
+            <h4 className="font-semibold">
               <T>KSA Office</T>
             </h4>
             <p>
               <T>Riyadh, Saudia Arabia</T>
             </p>
             <p>{/* <T>Phone: +966 58 363 9195</T> */}</p>
-          </div>{" "}
-          <div className="mb-2">
-            <h4 className="font-semibold">
-              <T>Pakistan Office</T>
-            </h4>
-            <p>
-              <T>Islamabad, Pakistan</T>
-            </p>
-            <p>{/* <T>Phone: +92 3238388294</T> */}</p>
           </div>
           <div className="mb-1">
             <h4 className="font-semibold">
@@ -81,6 +80,15 @@ const Footer = () => {
               </T>
             </p>
             <p>{/* <T>Phone: +52 1 998 347 3271</T> */}</p>
+          </div>
+          <div className="mb-1">
+            <h4 className="font-semibold">
+              <T>Pakistan Office</T>
+            </h4>
+            <p>
+              <T>Islamabad, Pakistan</T>
+            </p>
+            <p>{/* <T>Phone: +92 3238388294</T> */}</p>
           </div>
         </div>
 
@@ -117,7 +125,8 @@ const Footer = () => {
         <p>
           <T>
             {" "}
-            {new Date().getFullYear()}, TechLiftUp Pvt Ltd. Made with passion by{" "}
+            {new Date().getFullYear()}, TechLiftUp Pvt Ltd. Made with passion
+            by{" "}
           </T>
           <span className="text-red-600 font-semibold">TechLiftUp</span>
         </p>

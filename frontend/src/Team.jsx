@@ -44,7 +44,7 @@ const Team = () => {
             <T>Meet the Experts Behind TechLiftUp</T>
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* <!-- Team Member 1 --> */}
             <div className="text-center">
               <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
@@ -81,7 +81,7 @@ const Team = () => {
 
             {/* <!-- Team Member 3 --> */}
             <div className="text-center">
-              <div className="w-64 h-64 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
+              <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
                 <img
                   src="/assets/images/qadeer.png"
                   alt="Qadeer Ahmad"
@@ -127,6 +127,23 @@ const Team = () => {
               </h3>
               <p className="text-gray-500 text-lg">
                 <T>Strategic and Growth Partner</T>
+              </p>
+            </div>
+
+            {/* <!-- Team Member 6 --> */}
+            <div className="text-center">
+              <div className="w-48 h-48 md:w-56 md:h-56 mx-auto rounded-full overflow-hidden">
+                <img
+                  src="/assets/images/junior.jpeg"
+                  alt="Junior Buissereth"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-700 mt-4">
+                Junior Buissereth
+              </h3>
+              <p className="text-gray-500 text-lg">
+                <T>Marketing & Media</T>
               </p>
             </div>
           </div>
