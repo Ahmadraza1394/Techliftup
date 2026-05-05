@@ -18,10 +18,11 @@ import {
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
+import ServiceShowcase from "./components/ServiceShowcase";
 
-import { useState } from "react";
-
-import WhatsappButton from "./components/WhatsappButton";
+// import WhatsappButton from "./components/WhatsappButton";
 import CallToAction from "./components/CallToAction";
 import { T } from "./context/LanguageContext";
 
@@ -62,41 +63,49 @@ const services = [
     icon: <FaTools />,
     title: "AI Automation & AI Chatbot",
     desc: "Ensure your business runs smoothly with AI automation and chatbots.",
+    link: "/services/ai-automation",
   },
   {
     icon: <FaCode />,
     title: "Website Development",
     desc: "Robust and scalable web development solutions.",
+    link: "/services/website-development",
   },
   {
     icon: <FaDesktop />,
-    title: "Website Design ",
-    desc: "Modern, responsive, and user-friendly website designs.",
+    title: "Social Media Management",
+    desc: "Grow your brand with strategic social media management.",
+    link: "/services/social-media-management",
   },
   {
     icon: <FaBuffer />,
     title: "Wordpress Website Development",
     desc: " Custom WordPress websites for your business.",
+    link: "/services/wordpress-development",
   },
   {
     icon: <FaMobile />,
     title: "App Development",
     desc: "Custom mobile apps for iOS and Android.",
+    link: "/services/app-development",
   },
   {
     icon: <FaMagento />,
     title: "Cold Email Campaign",
     desc: "Generate leads with personalized cold email campaigns.",
+    link: "/services/cold-email-campaign",
   },
   {
     icon: <FaBullhorn />,
     title: "SEO & Marketing",
     desc: "Boost rankings with SEO & digital marketing.",
+    link: "/services/seo-marketing",
   },
   {
     icon: <FaEnvelope />,
     title: "Email Marketing",
     desc: "Engaging email campaigns to grow your business.",
+    link: "/services/email-marketing",
   },
   {
     icon: <FaGraduationCap />,
@@ -144,7 +153,32 @@ export default function Services() {
   const [selected, setSelected] = useState(0);
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>
+          Digital Marketing Services | SEO, Web Development & Marketing
+          Automation | TechLiftUp USA
+        </title>
+        <meta
+          name="description"
+          content="Comprehensive digital marketing services for USA businesses - SEO optimization, web development, social media marketing, PPC advertising, content creation, and marketing automation. Get results-driven solutions from TechLiftUp."
+        />
+        <meta
+          name="keywords"
+          content="digital marketing services USA, SEO services, web development, social media marketing, PPC advertising, content marketing, marketing automation, email marketing, lead generation services"
+        />
+        <meta
+          property="og:title"
+          content="Professional Digital Marketing Services | TechLiftUp USA"
+        />
+        <meta
+          property="og:description"
+          content="Transform your business with expert digital marketing services - SEO, web development, social media, and more."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.techliftup.com/services" />
+        <link rel="canonical" href="https://www.techliftup.com/services" />
+      </Helmet>
       <Header />
       {/* <section className="min-h-screen bg-gray-100 py-16 px-6 md:px-16 lg:px-24">
         <h2 className="text-center text-4xl font-bold mb-12 text-gray-900">
@@ -200,34 +234,68 @@ export default function Services() {
         </motion.div>
         <hr className="bg-gray-50 text-gray-50" />
       </section>
+
+      {/* Interactive Service Showcase */}
+      <section className="py-16 px-4 sm:px-6 md:px-12 lg:px-16 bg-gray-50">
+        <h2 className="text-center text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-sky-500">
+          <T>See Our Services in Action</T>
+        </h2>
+        <p className="text-center text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
+          <T>
+            Explore interactive demos of our digital solutions. Click on each
+            tab to see real-world examples of our AI chatbots, web development,
+            design work, mobile apps, and Google Ads campaigns.
+          </T>
+        </p>
+        <ServiceShowcase />
+      </section>
+
       {/* Our Services */}
       <section className="min-h-screen bg-gray-100 py-16 px-6 md:px-12 lg:px-16">
         <h2 className="text-center text-4xl font-bold mb-12 text-sky-500">
           <T>Our Services</T>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.05 }} // Added hover animation
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="bg-sky-500 rounded-3xl p-5 shadow flex flex-col items-start"
-            >
-              <div className="text-red-500 bg-gray-100 rounded-2xl p-3 text-5xl mb-6">
-                {service.icon}
-              </div>
-              <h3 className="text-4xl text-gray-100 font-semibold mb-3">
-                <T>{service.title}</T>
-              </h3>
-              <p className="text-gray-50 text-2xl">
-                <T>{service.desc}</T>
-              </p>
-            </motion.div>
-          ))}
+          {services.map((service, index) => {
+            const CardContent = (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                className="bg-sky-500 rounded-3xl p-5 shadow flex flex-col items-start cursor-pointer h-full"
+              >
+                <div className="text-red-500 bg-gray-100 rounded-2xl p-3 text-5xl mb-6">
+                  {service.icon}
+                </div>
+                <h3 className="text-4xl text-gray-100 font-semibold mb-3">
+                  <T>{service.title}</T>
+                </h3>
+                <p className="text-gray-50 text-2xl mb-4">
+                  <T>{service.desc}</T>
+                </p>
+                {service.link && (
+                  <div className="mt-auto pt-4">
+                    <span className="text-white font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">
+                      Learn More <span>→</span>
+                    </span>
+                  </div>
+                )}
+              </motion.div>
+            );
+
+            return service.link ? (
+              <Link key={index} to={service.link} className="block h-full">
+                {CardContent}
+              </Link>
+            ) : (
+              CardContent
+            );
+          })}
         </div>
       </section>
+
       {/* Our Approach */}
       <section className="bg-gray-100 px-2 pt-10 relative">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold flex items-center justify-center my-4 mb-10 text-sky-500">
@@ -278,8 +346,10 @@ export default function Services() {
             {/* Image */}
             <img
               src={approaches[selected].image}
-              alt={approaches[selected].title}
+              alt={`${approaches[selected].title} - Professional digital marketing services for USA businesses | TechLiftUp`}
+              title={approaches[selected].title}
               className="w-full lg:w-1/2 h-64 sm:h-80 object-top rounded-2xl shadow-lg"
+              loading="lazy"
             />
 
             {/* Text */}
@@ -373,9 +443,9 @@ export default function Services() {
       </section>
 
       <CallToAction />
-      <WhatsappButton />
+      {/* <WhatsappButton /> */}
 
       <Footer />
-    </>
+    </div>
   );
 }

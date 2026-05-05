@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   FaCalendarAlt,
   FaClock,
@@ -29,7 +30,7 @@ const Blog = () => {
   const allFilteredPosts = useMemo(() => {
     setIsLoading(true);
     let filtered = [...blogPosts].sort(
-      (a, b) => new Date(b.publishDate) - new Date(a.publishDate)
+      (a, b) => new Date(b.publishDate) - new Date(a.publishDate),
     );
 
     // Filter by category
@@ -44,7 +45,7 @@ const Blog = () => {
         (post) =>
           post.title.toLowerCase().includes(searchLower) ||
           post.excerpt.toLowerCase().includes(searchLower) ||
-          post.tags.some((tag) => tag.toLowerCase().includes(searchLower))
+          post.tags.some((tag) => tag.toLowerCase().includes(searchLower)),
       );
     }
 
@@ -57,7 +58,7 @@ const Blog = () => {
   const startIndex = (currentPage - 1) * postsPerPage;
   const currentPosts = allFilteredPosts.slice(
     startIndex,
-    startIndex + postsPerPage
+    startIndex + postsPerPage,
   );
 
   // Reset to first page when filters change
@@ -72,6 +73,40 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>
+          Digital Marketing Blog | Expert Tips & Strategies for USA Businesses |
+          TechLiftUp
+        </title>
+        <meta
+          name="description"
+          content="Get expert digital marketing insights, SEO tips, web development strategies, and business growth hacks for USA businesses. Free guides, case studies, and proven tactics from TechLiftUp."
+        />
+        <meta
+          name="keywords"
+          content="digital marketing blog USA, SEO tips, web development strategies, business growth hacks, marketing automation, lead generation, conversion optimization, small business marketing"
+        />
+        <meta
+          property="og:title"
+          content="Digital Marketing Blog | Expert Tips for USA Businesses | TechLiftUp"
+        />
+        <meta
+          property="og:description"
+          content="Expert digital marketing insights, SEO strategies, and business growth tips for USA businesses. Learn from proven case studies and actionable guides."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.techliftup.com/blog" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Digital Marketing Blog | TechLiftUp"
+        />
+        <meta
+          name="twitter:description"
+          content="Expert digital marketing insights and strategies for USA businesses."
+        />
+        <link rel="canonical" href="https://www.techliftup.com/blog" />
+      </Helmet>
       <Header />
 
       {/* Hero Section */}
@@ -241,8 +276,10 @@ const Blog = () => {
                     <div className="h-48 relative overflow-hidden">
                       <img
                         src={post.image}
-                        alt={post.title}
+                        alt={`${post.title} - ${post.category} guide for USA businesses | TechLiftUp digital marketing blog`}
+                        title={`${post.title} - Expert ${post.category} insights`}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
                         onError={(e) => {
                           // Fallback to gradient if image fails to load
                           e.target.style.display = "none";

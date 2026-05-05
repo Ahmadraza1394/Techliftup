@@ -1,12 +1,10 @@
+import React from "react";
 import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-
 import { motion } from "framer-motion";
-
 import { Link } from "react-router-dom";
-
-import WhatsappButton from "./components/WhatsappButton";
+import { Helmet } from "react-helmet-async";
 import { T } from "./context/LanguageContext";
 
 const cases = [
@@ -50,7 +48,8 @@ const cases = [
   {
     id: 5,
     title: "Sonneto AI ",
-    description: "Sonneto AI is a Music Streaming Platform that uses AI to provide personalized music recommendations to users.",
+    description:
+      "Sonneto AI is a Music Streaming Platform that uses AI to provide personalized music recommendations to users.",
     image: "/assets/images/sonnetoai.png", // Add your image path here
     details:
       "Sonneto AI is a Music Streaming Platform that uses AI to provide personalized music recommendations to users.",
@@ -61,14 +60,14 @@ const cases = [
     title: "Inter City ",
     description: "Inter City Provides Bus Booking Services ",
     image: "/assets/images/interCity.png", // Add your image path here
-    details:
-      "Inter City Provides Bus Booking Services",
+    details: "Inter City Provides Bus Booking Services",
     link: "/cases/intercity", // Corrected route to individual case
   },
   {
     id: 7,
     title: "Clearance Management System ",
-    description: "Clearance Management System is a system that helps educational institutions manage their clearance process ",
+    description:
+      "Clearance Management System is a system that helps educational institutions manage their clearance process ",
     image: "/assets/images/clearanceSystem.png", // Add your image path here
     details:
       "Clearance Management System is a system that helps educational institutions manage their clearance process",
@@ -77,24 +76,26 @@ const cases = [
   {
     id: 8,
     title: "Clean Water ",
-    description: "Clean Water provides Water Treatment and purification services   ",
+    description:
+      "Clean Water provides Water Treatment and purification services   ",
     image: "/assets/images/cleanwater.png", // Add your image path here
-    details:
-      "Clean Water provides Water Treatment and purification services",
+    details: "Clean Water provides Water Treatment and purification services",
     link: "/cases/cleanwater", // Corrected route to individual case
-  }, {
+  },
+  {
     id: 9,
     title: "The Hour Glass",
-    description: "The Hour Glass is a watches store that sell watches to customers ",
+    description:
+      "The Hour Glass is a watches store that sell watches to customers ",
     image: "/assets/images/hourGlass.png", // Add your image path here
-    details:
-      "The Hour Glass is a watches store that sell watches to customers",
+    details: "The Hour Glass is a watches store that sell watches to customers",
     link: "/cases/hourglass", // Corrected route to individual case
   },
   {
     id: 10,
     title: "Passion Farm ",
-    description: "Passion Form is Ecommerce Store that sell organic products to customers ",
+    description:
+      "Passion Form is Ecommerce Store that sell organic products to customers ",
     image: "/assets/images/passionfarm.png", // Add your image path here
     details:
       "Passion Form is ecommerce Store that sell organic products to customers",
@@ -105,8 +106,7 @@ const cases = [
     title: "Electro Santos ",
     description: "Electro Santos Provides Electric Products and services ",
     image: "/assets/images/electrosanto.png", // Add your image path here
-    details:
-      "Electro Santos Provides Electric Products and services",
+    details: "Electro Santos Provides Electric Products and services",
     link: "/cases/electrosanto", // Corrected route to individual case
   },
   {
@@ -117,14 +117,39 @@ const cases = [
     details:
       "Brand Wave Digital is a digital marketing agency that helps businesses grow.",
     link: "/cases/brand-wave-digital", // Corrected route to individual case
-  }
+  },
 ];
 
 const Cases = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>
+          Success Stories & Case Studies | TechLiftUp Digital Marketing Results
+          | USA Clients
+        </title>
+        <meta
+          name="description"
+          content="Explore TechLiftUp's proven success stories and case studies. See how we've helped USA businesses achieve remarkable growth through digital marketing, SEO, web development, and strategic campaigns."
+        />
+        <meta
+          name="keywords"
+          content="digital marketing case studies USA, success stories, client results, SEO case studies, web development portfolio, marketing campaign results, business growth examples"
+        />
+        <meta
+          property="og:title"
+          content="Client Success Stories | TechLiftUp Case Studies"
+        />
+        <meta
+          property="og:description"
+          content="Real results from real businesses. Discover how TechLiftUp drives growth for USA companies."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.techliftup.com/cases" />
+        <link rel="canonical" href="https://www.techliftup.com/cases" />
+      </Helmet>
       <Header />
-      
+
       <section className="team-section bg-gray-50 px-6 md:px-12 pt-32">
         {/* Team Header */}
         <motion.div
@@ -137,7 +162,12 @@ const Cases = () => {
             <T>Our Cases</T>
           </h2>
           <p className="text-2xl mb-6 text-justify max-w-3xl font-semibold text-gray-700 leading-relaxed">
-            <T>Every case is unique, and TechLiftUp takes pride in crafting solutions tailored to your business needs. From software development to building MEP engineering platforms, our versatile approach ensures the highest quality and measurable results.</T>
+            <T>
+              Every case is unique, and TechLiftUp takes pride in crafting
+              solutions tailored to your business needs. From software
+              development to building MEP engineering platforms, our versatile
+              approach ensures the highest quality and measurable results.
+            </T>
           </p>
 
           <Link
@@ -162,7 +192,10 @@ const Cases = () => {
             <T>Our Success Stories</T>
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-700">
-            <T>Discover how we've helped businesses transform their digital presence and achieve remarkable growth.</T>
+            <T>
+              Discover how we've helped businesses transform their digital
+              presence and achieve remarkable growth.
+            </T>
           </p>
         </motion.div>
 
@@ -180,8 +213,10 @@ const Cases = () => {
               <div className="relative overflow-hidden">
                 <img
                   src={caseItem.image}
-                  alt={caseItem.title}
+                  alt={`${caseItem.title} - ${caseItem.category} case study by TechLiftUp digital marketing agency USA`}
+                  title={`${caseItem.title} - Success story`}
                   className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -197,8 +232,19 @@ const Cases = () => {
                   className="inline-flex items-center px-4 py-2 bg-sky-500 text-white font-medium rounded-md hover:bg-sky-600 transition-colors duration-300 mt-auto"
                 >
                   <T>View Case Study</T>
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  <svg
+                    className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
                   </svg>
                 </Link>
               </div>
@@ -208,9 +254,9 @@ const Cases = () => {
       </section>
 
       <CallToAction />
-      <WhatsappButton />
+      {/* <WhatsappButton /> */}
       <Footer />
-    </>
+    </div>
   );
 };
 export default Cases;

@@ -11,7 +11,7 @@ import HowWeWorkSection from "./components/HowWeWorkSection";
 import StatisticsSection from "./components/StatisticsSection";
 import ContactForm from "./components/ContactForm";
 
-import WhatsappButton from "./components/WhatsappButton";
+// import WhatsappButton from "./components/WhatsappButton";
 import CallToAction from "./components/CallToAction";
 import LogoSlider from "./components/LogoSlider";
 import OurProcess from "./components/OurProcess";
@@ -44,7 +44,7 @@ const Home = () => {
         <ContactForm />
       </div>
       <CallToAction />
-      <WhatsappButton />
+      {/* <WhatsappButton /> */}
       <Footer />
     </div>
   );

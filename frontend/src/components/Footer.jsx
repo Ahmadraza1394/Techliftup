@@ -52,43 +52,41 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">
             <T>TechLiftUp Pvt Ltd.</T>
           </h3>
-          <div>
-            <h4 className="font-semibold">
+          <div className="mb-4">
+            <h4 className="font-semibold text-gray-800 mb-1">
               <T>U.S. Office</T>
             </h4>
-            <p>
+            <p className="text-gray-600 text-sm">
               <T>1295 River Street, Boston, MA 02136</T>
             </p>
-          </div>{" "}
-          <div className="mb-2">
-            <h4 className="font-semibold">
-              <T>KSA Office</T>
-            </h4>
-            <p>
-              <T>Riyadh, Saudia Arabia</T>
-            </p>
-            <p>{/* <T>Phone: +966 58 363 9195</T> */}</p>
           </div>
-          <div className="mb-1">
-            <h4 className="font-semibold">
+          <div className="mb-4">
+            <h4 className="font-semibold text-gray-800 mb-1">
               <T>Mexico Office</T>
             </h4>
-            <p>
+            <p className="text-gray-600 text-sm">
               <T>
                 Bahia Xaak, D 301, Turquesa Tower, Puerto Aventuras, Quintana
                 Roo, Mexico
               </T>
             </p>
-            <p>{/* <T>Phone: +52 1 998 347 3271</T> */}</p>
           </div>
-          <div className="mb-1">
-            <h4 className="font-semibold">
+          <div className="mb-4">
+            <h4 className="font-semibold text-gray-800 mb-1">
+              <T>KSA Office</T>
+            </h4>
+            <p className="text-gray-600 text-sm">
+              <T>Riyadh, Saudia Arabia</T>
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-gray-800 mb-1">
               <T>Pakistan Office</T>
             </h4>
-            <p>
+            <p className="text-gray-600 text-sm">
               <T>Islamabad, Pakistan</T>
             </p>
-            <p>{/* <T>Phone: +92 3238388294</T> */}</p>
           </div>
         </div>
 

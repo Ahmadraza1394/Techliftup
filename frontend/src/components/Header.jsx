@@ -1,19 +1,16 @@
 import PropTypes from "prop-types";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "/assets/images/logo.png";
-import { useLanguage } from "../context/LanguageContext";
+// import { useLanguage } from "../context/LanguageContext";
 import { useTranslation } from "../hooks/useTranslation";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
-  const { language, toggleLanguage } = useLanguage();
-  const dropdownRef = useRef(null);
-  const mobileDropdownRef = useRef(null);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   // Translate menu items
   const homeText = useTranslation("Home");
@@ -28,25 +25,68 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
-  // Close dropdowns when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-      if (
-        mobileDropdownRef.current &&
-        !mobileDropdownRef.current.contains(event.target)
-      ) {
-        setIsMobileDropdownOpen(false);
-      }
-    };
+  const services = [
+    {
+      name: "AI Automation & AI Chatbot",
+      link: "/services/ai-automation",
+      color: "sky",
+    },
+    {
+      name: "Website Development",
+      link: "/services/website-development",
+      color: "sky",
+    },
+    {
+      name: "Social Media Management",
+      link: "/services/social-media-management",
+      color: "pink",
+    },
+    {
+      name: "WordPress Development",
+      link: "/services/wordpress-development",
+      color: "blue",
+    },
+    {
+      name: "App Development",
+      link: "/services/app-development",
+      color: "indigo",
+    },
+    {
+      name: "Cold Email Campaign",
+      link: "/services/cold-email-campaign",
+      color: "red",
+    },
+    {
+      name: "SEO & Marketing",
+      link: "/services/seo-marketing",
+      color: "green",
+    },
+    {
+      name: "Email Marketing",
+      link: "/services/email-marketing",
+      color: "amber",
+    },
+  ];
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  // Close dropdowns when clicking outside - Commented out (language switcher disabled)
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  //       setIsDropdownOpen(false);
+  //     }
+  //     if (
+  //       mobileDropdownRef.current &&
+  //       !mobileDropdownRef.current.contains(event.target)
+  //     ) {
+  //       setIsMobileDropdownOpen(false);
+  //     }
+  //   };
+
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
 
   return (
     <header className="bg-white shadow-md fixed w-full z-40">
@@ -68,12 +108,87 @@ const Header = () => {
           >
             {homeText}
           </Link>
-          <Link
-            to="/services"
-            className="text-gray-800 hover:text-sky-600 transition font-bold text-base xl:text-lg"
+
+          {/* Services Dropdown */}
+          <div
+            className="relative group"
+            onMouseEnter={() => setIsServicesDropdownOpen(true)}
+            onMouseLeave={() => setIsServicesDropdownOpen(false)}
           >
-            {servicesText}
-          </Link>
+            <Link
+              to="/services"
+              className="text-gray-800 hover:text-sky-600 transition font-bold text-base xl:text-lg inline-flex items-center gap-1"
+            >
+              {servicesText}
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </Link>
+
+            {/* Dropdown Menu */}
+            {isServicesDropdownOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+                className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-2xl border border-gray-100 py-3 z-50"
+              >
+                <div className="px-4 py-2 border-b border-gray-100">
+                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                    Our Services
+                  </p>
+                </div>
+                {services.map((service, index) => (
+                  <Link
+                    key={index}
+                    to={service.link}
+                    className={`block px-4 py-3 hover:bg-${service.color}-50 transition-colors group/item`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div
+                        className={`w-2 h-2 rounded-full bg-${service.color}-500 group-hover/item:scale-125 transition-transform`}
+                      ></div>
+                      <span className="text-sm font-medium text-gray-700 group-hover/item:text-gray-900">
+                        {service.name}
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+                <div className="px-4 py-2 border-t border-gray-100 mt-2">
+                  <Link
+                    to="/services"
+                    className="text-xs font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1"
+                  >
+                    View All Services
+                    <svg
+                      className="w-3 h-3"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </motion.div>
+            )}
+          </div>
 
           <Link
             to="/cases"
@@ -162,10 +277,10 @@ const Header = () => {
           </div> */}
         </nav>
 
-        {/* Mobile Menu Button and Language Switcher */}
+        {/* Mobile Menu Button */}
         <div className="lg:hidden flex items-center space-x-3">
-          {/* Mobile Language Switcher Dropdown */}
-          <div className="relative" ref={mobileDropdownRef}>
+          {/* Mobile Language Switcher Dropdown - Commented Out */}
+          {/* <div className="relative" ref={mobileDropdownRef}>
             <button
               onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
               className="text-gray-800 hover:text-sky-600 transition font-bold flex items-center"
@@ -216,7 +331,7 @@ const Header = () => {
                 </button>
               </div>
             )}
-          </div>
+          </div> */}
 
           <button
             onClick={toggleMenu}
@@ -227,7 +342,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
@@ -244,13 +358,56 @@ const Header = () => {
               >
                 {homeText}
               </Link>
-              <Link
-                to="/services"
-                className="text-gray-800 hover:text-sky-600 transition font-bold text-xl w-full text-center py-2"
-                onClick={toggleMenu}
-              >
-                {servicesText}
-              </Link>
+
+              {/* Mobile Services Dropdown */}
+              <div className="w-full">
+                <button
+                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                  className="text-gray-800 hover:text-sky-600 transition font-bold text-xl w-full text-center py-2 inline-flex items-center justify-center gap-2"
+                >
+                  {servicesText}
+                  <svg
+                    className={`w-4 h-4 transition-transform ${isMobileServicesOpen ? "rotate-180" : ""}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {isMobileServicesOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="bg-gray-50 py-2 px-4"
+                  >
+                    {services.map((service, index) => (
+                      <Link
+                        key={index}
+                        to={service.link}
+                        className="block py-2 px-4 text-sm text-gray-700 hover:bg-sky-50 hover:text-sky-600 rounded transition"
+                        onClick={toggleMenu}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                    <Link
+                      to="/services"
+                      className="block py-2 px-4 text-sm font-semibold text-sky-600 hover:text-sky-700 mt-2 border-t border-gray-200 pt-3"
+                      onClick={toggleMenu}
+                    >
+                      View All Services →
+                    </Link>
+                  </motion.div>
+                )}
+              </div>
+
               <Link
                 to="/blog"
                 className="text-gray-800 hover:text-sky-600 transition font-bold text-xl w-full text-center py-2"

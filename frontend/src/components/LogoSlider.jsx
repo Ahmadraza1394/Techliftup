@@ -18,6 +18,11 @@ const logos = [
   "/assets/images/sunsafe.png",
   "/assets/images/viste-logo.png",
   "/assets/images/launcher.jpg",
+  "/assets/images/alogrenadye.png",
+  "/assets/images/anchorinmercy.png",
+  // "/assets/images/dgnl.png",
+  "/assets/images/voiceofgospel.png",
+  "/assets/images/vespucci.png",
 ];
 
 const LogoSlider = () => {

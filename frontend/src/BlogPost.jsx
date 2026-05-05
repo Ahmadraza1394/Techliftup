@@ -1,5 +1,6 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import {
   FaCalendarAlt,
   FaClock,
@@ -74,6 +75,69 @@ const BlogPost = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {post.title} | TechLiftUp Blog - Expert {post.category} for USA
+          Businesses
+        </title>
+        <meta name="description" content={post.excerpt} />
+        <meta
+          name="keywords"
+          content={`${post.tags.join(", ")}, USA, digital marketing, business growth, TechLiftUp`}
+        />
+        <meta name="author" content={post.author} />
+        <meta property="article:published_time" content={post.publishDate} />
+        <meta property="article:author" content={post.author} />
+        <meta property="article:section" content={post.category} />
+        {post.tags.map((tag) => (
+          <meta property="article:tag" content={tag} key={tag} />
+        ))}
+        <meta property="og:title" content={`${post.title} | TechLiftUp`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content={`https://www.techliftup.com/blog/${post.slug}`}
+        />
+        <meta property="og:image" content={post.image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:image" content={post.image} />
+        <link
+          rel="canonical"
+          href={`https://www.techliftup.com/blog/${post.slug}`}
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt,
+            image: post.image,
+            author: {
+              "@type": "Organization",
+              name: post.author,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "TechLiftUp",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.techliftup.com/assets/images/logo.png",
+              },
+            },
+            datePublished: post.publishDate,
+            dateModified: post.publishDate,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://www.techliftup.com/blog/${post.slug}`,
+            },
+            keywords: post.tags.join(", "),
+            articleSection: post.category,
+          })}
+        </script>
+      </Helmet>
       <div className="min-h-screen bg-gray-50">
         <Header />
 
@@ -227,8 +291,10 @@ const BlogPost = () => {
                         <div className="relative h-48 overflow-hidden">
                           <img
                             src={relatedPost.image}
-                            alt={relatedPost.title}
+                            alt={`${relatedPost.title} - ${relatedPost.category} tips for USA businesses | TechLiftUp`}
+                            title={`${relatedPost.title} - Expert guide`}
                             className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+                            loading="lazy"
                           />
                         </div>
                         <div className="p-6">
