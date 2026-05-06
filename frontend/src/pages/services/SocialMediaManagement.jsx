@@ -348,18 +348,16 @@ const SocialMediaManagement = () => {
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                "Custom content creation (graphics, videos, copy)",
+                "Custom content creation (graphics, copy)",
                 "Strategic content calendar planning",
-                "Daily posting and scheduling",
+
                 "Community management & engagement",
                 "Hashtag research and optimization",
-                "Social media advertising campaigns",
-                "Influencer collaboration coordination",
+
                 "Monthly analytics and performance reports",
                 "Competitor monitoring and analysis",
                 "Crisis management and reputation monitoring",
                 "Platform-specific optimization",
-                "Dedicated account manager",
               ].map((feature, index) => (
                 <motion.div
                   key={index}

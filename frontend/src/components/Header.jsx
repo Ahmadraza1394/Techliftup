@@ -27,24 +27,9 @@ const Header = () => {
 
   const services = [
     {
-      name: "AI Automation & AI Chatbot",
-      link: "/services/ai-automation",
-      color: "sky",
-    },
-    {
       name: "Website Development",
       link: "/services/website-development",
       color: "sky",
-    },
-    {
-      name: "Social Media Management",
-      link: "/services/social-media-management",
-      color: "pink",
-    },
-    {
-      name: "WordPress Development",
-      link: "/services/wordpress-development",
-      color: "blue",
     },
     {
       name: "App Development",
@@ -52,15 +37,27 @@ const Header = () => {
       color: "indigo",
     },
     {
-      name: "Cold Email Campaign",
-      link: "/services/cold-email-campaign",
-      color: "red",
+      name: "Social Media Management",
+      link: "/services/social-media-management",
+      color: "pink",
     },
+
     {
       name: "SEO & Marketing",
       link: "/services/seo-marketing",
       color: "green",
     },
+    {
+      name: "AI Automation & AI Chatbot",
+      link: "/services/ai-automation",
+      color: "sky",
+    },
+    {
+      name: "Cold Email Campaign",
+      link: "/services/cold-email-campaign",
+      color: "red",
+    },
+
     {
       name: "Email Marketing",
       link: "/services/email-marketing",
@@ -89,7 +86,7 @@ const Header = () => {
   // }, []);
 
   return (
-    <header className="bg-white shadow-md fixed w-full z-40">
+    <header className="bg-white shadow-md fixed w-full z-50">
       <div className="container mx-auto flex justify-between items-center px-4 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center py-2">
@@ -142,29 +139,28 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-2xl border border-gray-100 py-3 z-50"
+                className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-2xl border border-gray-100 py-2 z-[9999]"
               >
                 <div className="px-4 py-2 border-b border-gray-100">
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
                     Our Services
                   </p>
                 </div>
-                {services.map((service, index) => (
-                  <Link
-                    key={index}
-                    to={service.link}
-                    className={`block px-4 py-3 hover:bg-${service.color}-50 transition-colors group/item`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div
-                        className={`w-2 h-2 rounded-full bg-${service.color}-500 group-hover/item:scale-125 transition-transform`}
-                      ></div>
-                      <span className="text-sm font-medium text-gray-700 group-hover/item:text-gray-900">
-                        {service.name}
-                      </span>
-                    </div>
-                  </Link>
-                ))}
+                <div className="max-h-[60vh] overflow-y-auto py-1">
+                  {services.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.link}
+                      className="block px-4 transition-colors"
+                    >
+                      <div className="px-3 py-2 rounded-md border border-transparent hover:border-red-600 hover:bg-sky-50 transition-colors">
+                        <span className="text-sm font-medium text-gray-700 hover:text-sky-600 transition-colors">
+                          {service.name}
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
                 <div className="px-4 py-2 border-t border-gray-100 mt-2">
                   <Link
                     to="/services"
@@ -348,7 +344,7 @@ const Header = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white shadow-lg absolute top-full left-0 right-0 z-50"
+            className="lg:hidden bg-white shadow-lg absolute top-full left-0 right-0 z-[60]"
           >
             <nav className="flex flex-col items-center space-y-4 py-4">
               <Link
@@ -391,7 +387,7 @@ const Header = () => {
                       <Link
                         key={index}
                         to={service.link}
-                        className="block py-2 px-4 text-sm text-gray-700 hover:bg-sky-50 hover:text-sky-600 rounded transition"
+                        className="block py-2 px-4 text-sm text-gray-700 rounded transition border border-transparent hover:border-red-600 hover:bg-sky-50 hover:text-sky-600"
                         onClick={toggleMenu}
                       >
                         {service.name}

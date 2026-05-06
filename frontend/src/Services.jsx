@@ -60,28 +60,10 @@ const approaches = [
 ];
 const services = [
   {
-    icon: <FaTools />,
-    title: "AI Automation & AI Chatbot",
-    desc: "Ensure your business runs smoothly with AI automation and chatbots.",
-    link: "/services/ai-automation",
-  },
-  {
     icon: <FaCode />,
     title: "Website Development",
     desc: "Robust and scalable web development solutions.",
     link: "/services/website-development",
-  },
-  {
-    icon: <FaDesktop />,
-    title: "Social Media Management",
-    desc: "Grow your brand with strategic social media management.",
-    link: "/services/social-media-management",
-  },
-  {
-    icon: <FaBuffer />,
-    title: "Wordpress Website Development",
-    desc: " Custom WordPress websites for your business.",
-    link: "/services/wordpress-development",
   },
   {
     icon: <FaMobile />,
@@ -90,17 +72,38 @@ const services = [
     link: "/services/app-development",
   },
   {
-    icon: <FaMagento />,
-    title: "Cold Email Campaign",
-    desc: "Generate leads with personalized cold email campaigns.",
-    link: "/services/cold-email-campaign",
+    icon: <FaDesktop />,
+    title: "Social Media Management",
+    desc: "Grow your brand with strategic social media management.",
+    link: "/services/social-media-management",
   },
+
   {
     icon: <FaBullhorn />,
     title: "SEO & Marketing",
     desc: "Boost rankings with SEO & digital marketing.",
     link: "/services/seo-marketing",
   },
+  {
+    icon: <FaBuffer />,
+    title: "Wordpress Website Development",
+    desc: " Custom WordPress websites for your business.",
+    link: "/services/wordpress-development",
+  },
+  {
+    icon: <FaTools />,
+    title: "AI Automation & AI Chatbot",
+    desc: "Ensure your business runs smoothly with AI automation and chatbots.",
+    link: "/services/ai-automation",
+  },
+
+  {
+    icon: <FaMagento />,
+    title: "Cold Email Campaign",
+    desc: "Generate leads with personalized cold email campaigns.",
+    link: "/services/cold-email-campaign",
+  },
+
   {
     icon: <FaEnvelope />,
     title: "Email Marketing",
